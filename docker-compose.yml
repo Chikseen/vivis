@@ -11,3 +11,6 @@ services:
       - traefik.http.routers.vivis.middlewares=external-secure,vivis-redirect
       - traefik.http.middlewares.vivis-redirect.redirectregex.regex=https://www\.vivis\.gallery
       - traefik.http.middlewares.vivis-redirect.redirectregex.replacement=https://vivis.gallery
+    networks:
+      - proxy
+    restart: always
