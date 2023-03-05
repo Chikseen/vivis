@@ -2,7 +2,7 @@ services:
   web:
     build: ./vivis
     ports:
-      - 1702:3000
+      - 3000:3000
     labels:
       - traefik.enable=true
       - traefik.http.routers.vivis.rule=Host(`vivis.gallery`,`www.vivis.gallery`)
