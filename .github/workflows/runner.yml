@@ -1,0 +1,16 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: runner-main-v1
+        
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker container ls
+      - run: pwd
+      - run: ls
+      - run: docker-compose up -d --build

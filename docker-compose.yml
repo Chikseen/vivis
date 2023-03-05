@@ -1,0 +1,13 @@
+services:
+  web:
+    build: ./vivis
+    ports:
+      - 1702:3000
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.vivis.rule=Host(`vivis.gallery`,`www.vivis.gallery`)
+      - traefik.http.routers.vivis.entrypoints=https
+      - traefik.http.routers.vivis.tls=true
+      - traefik.http.routers.vivis.middlewares=external-secure,vivis-redirect
+      - traefik.http.middlewares.vivis-redirect.redirectregex.regex=https://www\.vivis\.gallery
+      - traefik.http.middlewares.vivis-redirect.redirectregex.replacement=https://vivis.gallery
