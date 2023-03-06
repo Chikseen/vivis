@@ -1,5 +1,6 @@
 <template>
-  <div>
-    <h1>Das wird deine neue Seite</h1>
-  </div>
+  <h1>Das wird deine neue Seite</h1>
+  <NuxtPage />
+  <ImageWrapper>
+  </ImageWrapper>
 </template>
