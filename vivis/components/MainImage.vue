@@ -16,7 +16,7 @@
 
   &_wrapper {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 100%;
     height: auto;
     background-color: $mainColor;

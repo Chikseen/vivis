@@ -2,20 +2,20 @@
   <h1>Vivis Webside</h1>
   <!--<NuxtPage />-->
   <MainImage>
-    <img src="@/assets/Images/TestImgs/Hund_Dig.jpg" alt="just a test image" />
+    <img src="@/assets/Images/testImgs/Hund_Dig.jpg" alt="just a test image" />
   </MainImage>
   <ImageSlider>
     <ImageWrapper>
-      <img src="@/assets/Images/TestImgs/Hund_D2_2.jpg" alt="just a test image" />
+      <img src="@/assets/Images/testImgs/Hund_D2_2.jpg" alt="just a test image" />
     </ImageWrapper>
     <ImageWrapper>
-      <img src="@/assets/Images/TestImgs/Hund_D4_5.jpg" alt="just a test image" />
+      <img src="@/assets/Images/testImgs/Hund_D4_5.jpg" alt="just a test image" />
     </ImageWrapper>
     <ImageWrapper>
-      <img src="@/assets/Images/TestImgs/King_of_the_Hill.jpg" alt="just a test image" />
+      <img src="@/assets/Images/testImgs/King_of_the_Hill.jpg" alt="just a test image" />
     </ImageWrapper>
     <ImageWrapper>
-      <img src="@/assets/Images/TestImgs/Hund_Roof_Ball.jpg" alt="just a test image" />
+      <img src="@/assets/Images/testImgs/Hund_Roof_Ball.jpg" alt="just a test image" />
     </ImageWrapper>
   </ImageSlider>
   <Footer></Footer>
