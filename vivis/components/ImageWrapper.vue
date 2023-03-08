@@ -4,16 +4,12 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .imageWrapper {
   width: 150px;
   height: 150px;
-  border-radius: 10px;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit:cover;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: $image-shadow;
 }
 </style>

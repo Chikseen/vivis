@@ -1,11 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import hooks from "./hooks/getImageColors.js";
+
 export default defineNuxtConfig({
-  css: ["@/styles/_global.scss"],
+  hooks: hooks(this),
   vite: {
     css: {
       preprocessorOptions: {
-        sass: {
-          additionalData: '@import "@/styles/_global.scss"',
+        scss: {
+          additionalData: '@import  "@/assets/styles/_global.scss";',
         },
       },
     },
