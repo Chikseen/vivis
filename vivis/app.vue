@@ -1,6 +1,8 @@
 <template>
-  <h1>Das wird deine neue Seite</h1>
+  <h1>Diese Website befindet sich momentan in der Entwicklung</h1>
+  <h6>xoxo</h6>
+  <a href="https://github.com/Chikseen/vivis">GitHub</a>
   <NuxtPage />
-  <ImageWrapper>
-  </ImageWrapper>
+  <ImageWrapper> </ImageWrapper>
 </template>
+s
