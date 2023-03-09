@@ -1,8 +1,8 @@
 <template>
   <div class="mainImage_wrapper">
     <h1 class="mainImage_text">This is our Dog Mischka</h1>
-    <div class="mainImage_img">
-      <slot></slot>
+    <div class="mainImage_img mainImage_img_overlay">
+      <img src="@/assets/Images/testImgs/Hund_Dig.jpg" alt="just a test image" />
     </div>
   </div>
 </template>
@@ -12,30 +12,43 @@
   &_text {
     color: whitesmoke;
     margin: auto;
+    mix-blend-mode: difference;
   }
 
   &_wrapper {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     width: 100%;
     height: auto;
-    background-color: $mainColor;
   }
 
   &_img {
     position: relative;
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
     overflow: hidden;
 
-    &:after {
-      content: "";
-      position: absolute;
-      top: -2rem;
-      left: -2rem;
-      width: calc(100% + 4rem);
-      height: calc(100% + 4rem);
-      background: linear-gradient(to right, $mainColor 2rem, #00000000 50%);
+    &_overlay {
+      img {
+        mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0));
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mainImage {
+    &_wrapper {
+      flex-direction: column;
+    }
+
+    &_img {
+      &_overlay {
+        img {
+          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0));
+        }
+      }
     }
   }
 }

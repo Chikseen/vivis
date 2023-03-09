@@ -1,9 +1,7 @@
 <template>
-  <h1>Vivis Webside</h1>
+  <h1 style="margin: auto; color: whitesmoke; mix-blend-mode: difference">Vivis Webside</h1>
   <!--<NuxtPage />-->
-  <MainImage>
-    <img src="@/assets/Images/testImgs/Hund_Dig.jpg" alt="just a test image" />
-  </MainImage>
+  <MainImage />
   <ImageSlider>
     <ImageWrapper>
       <img src="@/assets/Images/testImgs/Hund_D2_2.jpg" alt="just a test image" />
@@ -53,5 +51,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  //background: linear-gradient(to right, $mainColor 10rem, #00000000 100%);
+  //background-color: $mainColor;
+  background-image: $mainColor;
 }
 </style>

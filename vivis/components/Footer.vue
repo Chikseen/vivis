@@ -15,7 +15,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,7 +24,7 @@
   background-image: $footer-gradiant-black;
 
   &_logo {
-    height: 3rem;
+    height: 2rem;
     width: auto;
   }
 }

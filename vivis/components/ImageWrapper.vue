@@ -6,8 +6,8 @@
 
 <style lang="scss" scoped>
 .imageWrapper {
-  width: 150px;
-  height: 150px;
+  min-width: 150px;
+  min-height: 150px;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: $image-shadow;

@@ -8,6 +8,7 @@
 .imageSlider {
   position: relative;
   display: flex;
+  width: auto;
   flex-direction: row;
   gap: 1rem;
   padding: 1rem;
