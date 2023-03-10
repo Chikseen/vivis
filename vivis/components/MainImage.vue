@@ -1,8 +1,11 @@
 <template>
   <div class="mainImage_wrapper">
-    <h1 class="mainImage_text">This is our Dog Mischka</h1>
+    <span class="mainImage_text">
+      <h1 class="mainImage_text_header">Vivis Gallery</h1>
+      <h2 class="mainImage_text_sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eos earum, sit cum tempore sint placeat animi, eius quas quaerat deleniti alias minus perferendis hic quibusdam autem facilis asperiores vitae.</h2>
+    </span>
     <div class="mainImage_img mainImage_img_overlay">
-      <img src="@/assets/Images/testImgs/Hund_Dig.jpg" alt="just a test image" />
+      <img src="@/assets/images/big/Blowflower.png" alt="just a test image" loading="lazy" />
     </div>
   </div>
 </template>
@@ -10,9 +13,19 @@
 <style lang="scss" scoped>
 .mainImage {
   &_text {
-    color: whitesmoke;
-    margin: auto;
-    mix-blend-mode: difference;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+    gap: 2rem;
+    color: $mainTextColor;
+
+    &_header {
+      text-align: center;
+      font-size: 3rem;
+    }
+    &_sub {
+    }
   }
 
   &_wrapper {
@@ -25,9 +38,11 @@
 
   &_img {
     position: relative;
-    max-width: 500px;
-    max-height: 500px;
+    display: flex;
     overflow: hidden;
+    max-width: 600px;
+    min-width: 50%;
+    height: 600px;
 
     &_overlay {
       img {
@@ -44,6 +59,8 @@
     }
 
     &_img {
+      height: auto;
+
       &_overlay {
         img {
           mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0));

@@ -1,19 +1,18 @@
 <template>
-  <h1 style="margin: auto; color: whitesmoke; mix-blend-mode: difference">Vivis Webside</h1>
   <!--<NuxtPage />-->
   <MainImage />
   <ImageSlider>
     <ImageWrapper>
-      <img src="@/assets/Images/testImgs/Hund_D2_2.jpg" alt="just a test image" />
+      <img src="@/assets/images/small/Hund_D2_2.png" alt="just a test image" loading="lazy" />
     </ImageWrapper>
     <ImageWrapper>
-      <img src="@/assets/Images/testImgs/Hund_D4_5.jpg" alt="just a test image" />
+      <img src="@/assets/images/small/Hund_D4_5.png" alt="just a test image" loading="lazy" />
     </ImageWrapper>
     <ImageWrapper>
-      <img src="@/assets/Images/testImgs/King_of_the_Hill.jpg" alt="just a test image" />
+      <img src="@/assets/images/small/King_of_the_Hill.png" alt="just a test image" loading="lazy" />
     </ImageWrapper>
     <ImageWrapper>
-      <img src="@/assets/Images/testImgs/Hund_Roof_Ball.jpg" alt="just a test image" />
+      <img src="@/assets/images/small/Hund_Roof_Ball.png" alt="just a test image" loading="lazy" />
     </ImageWrapper>
   </ImageSlider>
   <Footer></Footer>
@@ -46,8 +45,24 @@ p {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #00000000;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: $mainAkzentColor_1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $mainAkzentColor_2;
+}
+
 #__nuxt {
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
