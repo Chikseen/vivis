@@ -5,7 +5,7 @@
       <h2 class="mainImage_text_sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eos earum, sit cum tempore sint placeat animi, eius quas quaerat deleniti alias minus perferendis hic quibusdam autem facilis asperiores vitae.</h2>
     </span>
     <div class="mainImage_img mainImage_img_overlay">
-      <img src="@/assets/images/big/Blowflower.png" alt="just a test image" loading="lazy" />
+      <img src="@/assets/images/big/Blowflower.jpg" alt="just a test image" loading="lazy" />
     </div>
   </div>
 </template>
@@ -25,7 +25,6 @@
       font-size: 3rem;
       height: 6.5rem;
       width: auto;
-      color: $mainTextColor;
       border-radius: $borderRadius;
       white-space: nowrap;
       overflow: hidden;
@@ -47,7 +46,6 @@
       }
     }
     &_sub {
-      color: $mainTextColor;
     }
   }
 

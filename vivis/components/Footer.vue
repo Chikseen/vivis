@@ -22,6 +22,7 @@
   align-items: center;
   gap: 1rem;
   background-image: $footer-gradiant-black;
+  z-index: 10;
 
   &_logo {
     height: 2rem;

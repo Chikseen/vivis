@@ -6,7 +6,7 @@ export default (nuxtConfig) => ({
 
         console.log("Start setting the main Image colors");
 
-        const img = path.join(__dirname + "/../" + "assets/images/big/Blowflower.png");
+        const img = path.join(__dirname + "/../" + "assets/images/big/Blowflower.jpg");
 
         // Sets main image colors
         let color = await ColorThief.getColor(img, 2)

@@ -7,14 +7,14 @@
 <style lang="scss" scoped>
 .imageSlider {
   position: relative;
-  display: flex;
+  display: inline-flex;
   width: auto;
   height: auto;
   flex-direction: row;
   gap: 1rem;
   padding: 1rem;
   overflow-y: hidden;
-  overflow-x: auto;
-  scroll-snap-type: y proximity;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 }
 </style>

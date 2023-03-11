@@ -1,20 +1,61 @@
 <template>
-  <!--<NuxtPage />-->
   <MainImage />
   <ImageSlider>
-    <ImageWrapper>
-      <img src="@/assets/images/small/Hund_D2_2.png" alt="just a test image" loading="lazy" />
-    </ImageWrapper>
-    <ImageWrapper>
-      <img src="@/assets/images/small/Hund_D4_5.png" alt="just a test image" loading="lazy" />
-    </ImageWrapper>
-    <ImageWrapper>
-      <img src="@/assets/images/small/King_of_the_Hill.png" alt="just a test image" loading="lazy" />
-    </ImageWrapper>
-    <ImageWrapper>
-      <img src="@/assets/images/small/Hund_Roof_Ball.png" alt="just a test image" loading="lazy" />
-    </ImageWrapper>
+    <ImageDropdown>
+      <NuxtLink to="/ShootingOne" class="imageDropdown_header"> Shooting 1 </NuxtLink>
+      <ImageWrapper>
+        <img src="@/assets/images/small/Hund_D2_2.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+      <ImageWrapper>
+        <img src="@/assets/images/small/Hund_D2_2.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+      <ImageWrapper>
+        <img src="@/assets/images/small/Hund_D2_2.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+      <ImageWrapper>
+        <img src="@/assets/images/small/Hund_D2_2.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+    </ImageDropdown>
+    <ImageDropdown>
+      <NuxtLink to="/ShootingTwo" class="imageDropdown_header"> Shooting 2 </NuxtLink>
+      <ImageWrapper>
+        <img src="@/assets/images/small/Hund_D4_5.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+      <ImageWrapper>
+        <img src="@/assets/images/small/Hund_D4_5.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+      <ImageWrapper>
+        <img src="@/assets/images/small/Hund_D4_5.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+    </ImageDropdown>
+    <ImageDropdown>
+      <ImageWrapper>
+        <img src="@/assets/images/small/King_of_the_Hill.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+      <ImageWrapper>
+        <img src="@/assets/images/small/King_of_the_Hill.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+      <ImageWrapper>
+        <img src="@/assets/images/small/King_of_the_Hill.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+      <ImageWrapper>
+        <img src="@/assets/images/small/King_of_the_Hill.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+      <ImageWrapper>
+        <img src="@/assets/images/small/King_of_the_Hill.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+    </ImageDropdown>
+    <ImageDropdown>
+      <ImageWrapper>
+        <img src="@/assets/images/small/Hund_Roof_Ball.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+      <ImageWrapper>
+        <img src="@/assets/images/small/Hund_Roof_Ball.jpg" alt="just a test image" loading="lazy" />
+      </ImageWrapper>
+    </ImageDropdown>
   </ImageSlider>
+  <NuxtPage />
+  <div style="height: 10rem"></div>
   <Footer></Footer>
 </template>
 
@@ -46,15 +87,15 @@ p {
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.25rem;
+  height: 0.25rem;
 }
 ::-webkit-scrollbar-track {
   background: #00000000;
   border-radius: $borderRadius;
 }
 ::-webkit-scrollbar-thumb {
-  background: $mainAkzentColor_1;
+  background: $mainAkzentColor_0;
   border-radius: $borderRadius;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -66,8 +107,10 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 1rem;
   //background: linear-gradient(to right, $mainColor 10rem, #00000000 100%);
   //background-color: $mainColor;
   background-image: $mainColor;
+  color: $mainTextColor;
 }
 </style>
