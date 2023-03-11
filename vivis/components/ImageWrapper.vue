@@ -10,7 +10,7 @@
   max-width: 15rem;
   min-height: 10rem;
   max-height: 15rem;
-  border-radius: 1rem;
+  border-radius: $borderRadius;
   overflow: hidden;
   box-shadow: $image-shadow;
   scroll-snap-align: start;

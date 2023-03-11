@@ -6,10 +6,9 @@ export default (nuxtConfig) => ({
 
         console.log("Start setting the main Image colors");
 
-        // Current Workaround will change soon
-
         const img = path.join(__dirname + "/../" + "assets/images/big/Blowflower.png");
 
+        // Sets main image colors
         let color = await ColorThief.getColor(img, 2)
         color = color.map((c) => c - 10); // Darken the base color
 
@@ -17,16 +16,22 @@ export default (nuxtConfig) => ({
         const color_II = color;
         const color_III = color.map((c) => c - 20);
 
+        // Sets gradiant
         let string = `$mainColor: linear-gradient(-45deg, rgb(${color_I.join(',')}) 0%, rgb(${color_II.join(',')}) 46%, rgb(${color_III.join(',')}) 100%);`;
         string += "\n";
 
         console.log("Start setting the akzent colors");
 
+        // Gets akzent colors
         color = await ColorThief.getPalette(img, 3, 2)
 
+        // Sets main colors
         string += `$mainTextColor: rgb(${color[1].map(c => c + 20).join(',')});`;
         string += "\n";
+        string += `$mainTextColorShadow: rgb(${color[1].map(c => 255 - c).join(',')});`;
+        string += "\n";
 
+        // Sets n Akzent colors
         color.forEach((c, i) => {
             string += `$mainAkzentColor_${i}: rgb(${c.join(',')});`;
             string += "\n";

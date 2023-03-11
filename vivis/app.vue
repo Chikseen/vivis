@@ -51,11 +51,11 @@ p {
 }
 ::-webkit-scrollbar-track {
   background: #00000000;
-  border-radius: 10px;
+  border-radius: $borderRadius;
 }
 ::-webkit-scrollbar-thumb {
   background: $mainAkzentColor_1;
-  border-radius: 10px;
+  border-radius: $borderRadius;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: $mainAkzentColor_2;

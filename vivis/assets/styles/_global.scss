@@ -2,3 +2,11 @@
 
 $footer-gradiant-black: linear-gradient(50deg, #36393a 0%, #494a4b 63%, #5c5c5c 100%);
 $image-shadow: 0.2rem 0.2rem 0.8rem 0px rgba(117, 117, 117, 0.426);
+$borderRadius: 0.8rem;
+
+
+.boxShadow {
+    &_bottom {
+        box-shadow: 0 8px 5px -5px #a3a3a367;
+    }
+}
