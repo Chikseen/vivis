@@ -12,4 +12,10 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    public: {
+      S_1: "ShootingOne",
+      S_2: "ShootingTwo",
+    },
+  },
 });

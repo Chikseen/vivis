@@ -9,6 +9,7 @@
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(10px, max-content));
   height: auto;
+  max-height: 15rem;
   min-width: 20rem;
   transition: all 0.5s;
   scroll-snap-align: start;
@@ -22,6 +23,7 @@
 
   &:hover {
     grid-template-rows: repeat(auto-fit, minmax(10px, max-content));
+    max-height: 50rem;
   }
 }
 </style>

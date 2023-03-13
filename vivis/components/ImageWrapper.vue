@@ -9,7 +9,7 @@
   min-width: 80%;
   max-width: 80%;
   margin: 0 auto;
-  height: 5rem;
+  height: 10rem;
   border-radius: $borderRadius;
   box-shadow: $image-shadow;
   overflow: hidden;

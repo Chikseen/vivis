@@ -1,8 +1,8 @@
 <template>
   <MainImage />
   <ImageSlider>
-    <ImageDropdown>
-      <NuxtLink to="/ShootingOne" class="imageDropdown_header"> Shooting 1 </NuxtLink>
+    <ImageDropdown @click="this.$router.push({ query: { shooting: names.S_1 } })">
+      <NuxtLink :to="redirecter[0]" class="imageDropdown_header">{{ names.S_1 }} </NuxtLink>
       <ImageWrapper>
         <img src="@/assets/images/small/Hund_D2_2.jpg" alt="just a test image" loading="lazy" />
       </ImageWrapper>
@@ -16,8 +16,8 @@
         <img src="@/assets/images/small/Hund_D2_2.jpg" alt="just a test image" loading="lazy" />
       </ImageWrapper>
     </ImageDropdown>
-    <ImageDropdown>
-      <NuxtLink to="/ShootingTwo" class="imageDropdown_header"> Shooting 2 </NuxtLink>
+    <ImageDropdown @click="this.$router.push({ query: { shooting: names.S_2 } })">
+      <NuxtLink :to="redirecter[1]" class="imageDropdown_header">{{ names.S_2 }} </NuxtLink>
       <ImageWrapper>
         <img src="@/assets/images/small/Hund_D4_5.jpg" alt="just a test image" loading="lazy" />
       </ImageWrapper>
@@ -58,6 +58,26 @@
   <div style="height: 10rem"></div>
   <Footer></Footer>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      redirecter: [],
+      names: {},
+    };
+  },
+  created() {
+    const runtimeConfig = useRuntimeConfig();
+    this.names = runtimeConfig.public;
+    this.redirecter = [`/${this.names.S_1}`, `/${this.names.S_2}`];
+  },
+  mounted() {
+    // It is set to redirect but if JS is enabeled it will deactivate this function
+    this.redirecter = [];
+  },
+};
+</script>
 
 <style lang="scss">
 body,
