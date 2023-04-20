@@ -14,8 +14,10 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      S_1: "ShootingOne",
-      S_2: "ShootingTwo",
+      S_1: { name: "Shooting One", route: "one" },
+      S_2: { name: "Shooting Two", route: "two" },
+      S_3: { name: "Shooting Three", route: "three" },
+      S_4: { name: "Shooting ...", route: "..." },
     },
   },
 });
