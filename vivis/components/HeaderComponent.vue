@@ -1,51 +1,129 @@
 <template>
   <div class="header_wrapper">
     <img class="header_img" src="@/assets/images/big/Blowflower.jpg" alt="" />
-    <div class="header_titel">Vivis Gallery</div>
+    <div class="header_content">
+      <div class="header_content_titel">
+        <h1 class="header_content_titel_vivis">Vivis</h1>
+        <h1 class="header_content_titel_gallery">Gallery</h1>
+      </div>
+      <div class="header_content_logos_wrapper">
+        <p>Follow Me -></p>
+        <a href="https://www.instagram.com/vivis_secrets/">
+          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" />
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
 .header {
   &_wrapper {
+    position: relative;
     width: 100vw;
     height: 100vh;
   }
 
-  &_titel {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 6rem;
-    color: $light-font-color;
-  }
-
   &_img {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-}
 
-@media only screen and (max-width: 400px) {
-  .header {
+  &_content {
+    position: relative;
+    margin: 0 auto;
+    width: calc(100% - 20px); /* Need a specific value to work */
+    height: 100%;
+    max-width: $max-content-width;
+
     &_titel {
-      font-size: 5rem;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: calc(100% - 20px);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 2rem;
+      margin: 0;
+      font-size: 4rem;
+      color: $light-font-color;
+
+      &_vivis {
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+      }
+      &_gallery {
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+      }
+    }
+
+    &_logos {
+      &_wrapper {
+        position: absolute;
+        display: flex;
+        bottom: 1rem;
+        right: 1rem;
+        animation: 1s ease-out 0s 1 slideInFromRight;
+
+        p {
+          color: $light-font-color;
+          margin: auto 1rem;
+        }
+      }
+      &_icon {
+        width: 4rem;
+      }
     }
   }
 }
-@media only screen and (max-width: 300px) {
+
+//Animations
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// Media Query
+@media only screen and (max-width: 500px) {
   .header {
-    &_titel {
-      font-size: 4rem;
+    &_content {
+      &_titel {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .header {
+    &_content {
+      &_titel {
+        font-size: 2rem;
+      }
     }
   }
 }
 // For whatever reason but whi knows ?
 @media only screen and (max-width: 200px) {
   .header {
-    &_titel {
-      font-size: 3rem;
+    &_content {
+      &_titel {
+        font-size: 1rem;
+      }
     }
   }
 }
