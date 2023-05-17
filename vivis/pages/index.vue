@@ -1,7 +1,8 @@
 <template>
   <Transition name="fade" mode="out-in">
-    <ShootingOne v-if="query == names.S_1.route"></ShootingOne>
-    <ShootingTwo v-else-if="query == names.S_2.route"></ShootingTwo>
+    <czfotografie v-if="query == names.S_1.route" key="1"></czfotografie>
+    <betoblitz v-else-if="query == names.S_2.route" key="2"></betoblitz>
+    <blickwinkel v-else-if="query == names.S_3.route" key="3"></blickwinkel>
   </Transition>
 </template>
 
@@ -10,7 +11,7 @@ export default {
   data() {
     return {
       names: {},
-      query: "one",
+      query: "czfotografie",
     };
   },
   watch: {
@@ -21,6 +22,9 @@ export default {
   created() {
     const runtimeConfig = useRuntimeConfig();
     this.names = runtimeConfig.public;
+  },
+  mounted() {
+    this.query = this.$route.query.shooting;
   },
 };
 </script>

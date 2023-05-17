@@ -36,9 +36,26 @@ p {
   margin: 0;
   font-size: 1.2rem;
 }
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+  color: $light-font-color;
+}
 
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
   position: absolute;
 }
 ::-webkit-scrollbar-track {
@@ -51,4 +68,33 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: #303030;
 }
+
+//Animations
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="header_wrapper">
-    <img class="header_img" src="@/assets/images/big/Blowflower.jpg" alt="" />
+    <img class="header_img" src="@/assets/images/main/big/IMG_2687.jpg" alt="" />
     <div class="header_content">
       <div class="header_content_titel">
         <h1 class="header_content_titel_vivis">Vivis</h1>
@@ -40,7 +40,7 @@
 
     &_titel {
       position: absolute;
-      top: 10px;
+      bottom: 10rem;
       left: 10px;
       width: calc(100% - 20px);
       display: flex;
@@ -76,25 +76,6 @@
         width: 4rem;
       }
     }
-  }
-}
-
-//Animations
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 

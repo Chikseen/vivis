@@ -1,3 +1,3 @@
 <template>
-  <ShootingOne />
+  <blickwinkel />
 </template>

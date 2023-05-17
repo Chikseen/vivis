@@ -6,6 +6,8 @@
     <a href="https://www.instagram.com/vivis_secrets/">
       <img class="footer_logo" src="@/assets/logos/InstagramLogo.svg" />
     </a>
+    <nuxt-link to="DataPrivacy"> Datenschutz </nuxt-link>
+    <nuxt-link to="Impressum"> Impressum </nuxt-link>
   </div>
 </template>
 
@@ -23,9 +25,14 @@
   gap: 1rem;
   background-color: $main-background-color;
   z-index: 10;
+
   &_logo {
     height: 2rem;
     width: auto;
+  }
+
+  a {
+    color: $main-font-color;
   }
 }
 </style>
