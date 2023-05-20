@@ -17,6 +17,8 @@ export default defineNuxtConfig({
       S_1: { name: "czfotografie", route: "czfotografie" },
       S_2: { name: "blitzeis.fotografie - betografie", route: "betoblitz" },
       S_3: { name: "blickwinkelpictures", route: "blickwinkelpictures" },
+      S_4: { name: "ulfleuteritz", route: "ulfleuteritz" },
+      S_5: { name: "der_kraft", route: "der_kraft" },
     },
   },
 });

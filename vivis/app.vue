@@ -53,6 +53,10 @@ li {
   color: $light-font-color;
 }
 
+img {
+  box-shadow: $image-shadow;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

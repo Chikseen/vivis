@@ -32,7 +32,7 @@
         :class="['menu_content_item', categorie == 'fashion' ? 'menu_content_item_active' : '']"
         @click="
           categorie = 'fashion';
-          this.$router.push({ name: 'index', query: { shooting: names.S_3.route, categorie: 'fashion' } });
+          this.$router.push({ name: 'index', query: { shooting: names.S_5.route, categorie: 'fashion' } });
         "
       >
         <p>Fashion</p>
@@ -50,8 +50,16 @@
         </NuxtLink>
       </div>
       <div class="menu_content" v-else-if="categorie == 'portrait'">
-        <NuxtLink :to="redirecter[2]" :class="['menu_content_item', query == names.S_3.route ? 'menu_content_item_active' : '']" @click="this.$router.push({ name: 'index', query: { shooting: names.S_3.route, categorie: 'fairytale' } })">
+        <NuxtLink :to="redirecter[2]" :class="['menu_content_item', query == names.S_3.route ? 'menu_content_item_active' : '']" @click="this.$router.push({ name: 'index', query: { shooting: names.S_3.route, categorie: 'portrait' } })">
           <p>{{ names.S_3.name }}</p>
+        </NuxtLink>
+        <NuxtLink :to="redirecter[2]" :class="['menu_content_item', query == names.S_4.route ? 'menu_content_item_active' : '']" @click="this.$router.push({ name: 'index', query: { shooting: names.S_4.route, categorie: 'portrait' } })">
+          <p>{{ names.S_4.name }}</p>
+        </NuxtLink>
+      </div>
+      <div class="menu_content" v-else-if="categorie == 'fashion'">
+        <NuxtLink :to="redirecter[2]" :class="['menu_content_item', query == names.S_5.route ? 'menu_content_item_active' : '']" @click="this.$router.push({ name: 'index', query: { shooting: names.S_5.route, categorie: 'fashion' } })">
+          <p>{{ names.S_5.name }}</p>
         </NuxtLink>
       </div>
     </Transition>
@@ -81,6 +89,10 @@ export default {
   mounted() {
     // It is set to redirect but if JS is enabeled it will deactivate this function
     this.redirecter = [];
+    if (!this.$route.query.shooting || !this.$route.query.categorie) {
+      this.$route.query.shooting = "czfotografie";
+      this.$route.query.categorie = "akt";
+    }
     this.query = this.$route.query.shooting;
     this.categorie = this.$route.query.categorie;
   },
@@ -111,7 +123,7 @@ export default {
       gap: 1rem;
       transition: ease-out 0.2s all;
       border-radius: 10px;
-
+      
       &_active {
         background-color: $dark-background-color;
 
