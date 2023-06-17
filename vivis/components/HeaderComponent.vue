@@ -1,6 +1,6 @@
 <template>
   <div class="header_wrapper">
-    <img class="header_img" src="@/assets/images/main/big/IMG_2687.jpg" alt="" />
+    <img class="header_img" src="@/assets/staticImages/main/IMG_2687.jpg" alt="" />
     <div class="header_content">
       <div class="header_content_titel">
         <h1 class="header_content_titel_vivis">Vivis</h1>

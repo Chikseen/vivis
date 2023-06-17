@@ -1,11 +1,24 @@
 <template>
   <div class="gallery_wrapper">
-    <slot></slot>
+    <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery_inactive">
+      <a v-if="img.info?.href" :href="img.info?.href">
+        <img :src="`images/${imgJson.path}/${img.name}`" alt="just a test image" loading="lazy" />
+      </a>
+      <a v-else :href="`images/${imgJson.path}/${img.name}`">
+        <img :src="`images/${imgJson.path}/${img.name}`" alt="" loading="lazy">
+      </a>
+      <h5 v-if="img.info?.tagList">
+        <a v-for="(tag, index) in img.info.tagList" :key="index" :href="tag">{{ "#" + tag.replaceAll("/", "").replace("https:www.instagram.comexploretags", "") }}</a>
+      </h5>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    imgJson: { type: Object, default: () => { } }
+  },
   methods: {
     reveal() {
       var reveals = document.querySelectorAll(".gallery_inactive");
@@ -22,6 +35,8 @@ export default {
     },
   },
   mounted() {
+
+
     window.addEventListener("scroll", () => this.reveal());
     this.reveal();
   },
