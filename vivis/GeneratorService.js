@@ -18,7 +18,7 @@ function adjustImages(allImages) {
 		const width = metadata.width;
 		const height = metadata.height;
 
-		if (metadata.format != "jpg" || width > 800 || height > 800) {
+		if (metadata.format != "jpeg" || width > 800 || height > 800) {
 			console.log("Redo:  " + img);
 
 			if (width > height) image.resize({ width: 800, withoutEnlargement: true });
@@ -29,11 +29,11 @@ function adjustImages(allImages) {
 					quality: 100,
 					chromaSubsampling: "4:4:4",
 				})
-				.toBuffer(function (err, buffer) {
-					fs.writeFile(img.replace(/\.jpg|\.png|\.JPG|\.PNG|\.JPEG/gm, ".jpg"), buffer, function (e) {});
+				.toBuffer()
+				.then((data) => {
+					fs.writeFileSync(img.replace(/\.jpg|\.png|\.JPG|\.PNG|\.JPEG/gm, ".jpeg"), data);
+					fs.unlinkSync(img);
 				});
-
-			if (metadata.format != "jpeg") fs.unlinkSync(img);
 		}
 	});
 }
