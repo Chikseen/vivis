@@ -10,17 +10,31 @@ const allImages = getAllImagePaths();
 adjustImages(allImages);
 
 function adjustImages(allImages) {
-	allImages.forEach((img) => {
-		sharp(img)
-			.resize({ width: 528 })
-			.toFile(img.replace(/\.jpg|\.png|\.JPG|\.PNG/gm, ".jpg"))
-			.then(function () {
-				console.log("Success");
-			})
-			.catch(function (e) {
-				console.log("Error occured");
-				console.log(e);
-			});
+	console.log("___ Checking Images");
+	allImages.forEach(async (img) => {
+		const image = await sharp(img);
+		const metadata = await image.metadata();
+
+		const width = metadata.width;
+		const height = metadata.height;
+
+		if (metadata.format != "jpg" || width > 800 || height > 800) {
+			console.log("Redo:  " + img);
+
+			if (width > height) image.resize({ width: 800, withoutEnlargement: true });
+			else image.resize({ height: 800, withoutEnlargement: true });
+
+			image
+				.jpeg({
+					quality: 100,
+					chromaSubsampling: "4:4:4",
+				})
+				.toBuffer(function (err, buffer) {
+					fs.writeFile(img.replace(/\.jpg|\.png|\.JPG|\.PNG|\.JPEG/gm, ".jpg"), buffer, function (e) {});
+				});
+
+			if (metadata.format != "jpeg") fs.unlinkSync(img);
+		}
 	});
 }
 
