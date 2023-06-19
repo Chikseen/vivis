@@ -2,10 +2,10 @@
   <div class="gallery_wrapper">
     <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery_inactive">
       <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
-        <nuxt-img :src="`${imgJson.path}/${img.name}`" alt="A Picture of the model" loading="lazy" />
+        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" />
       </a>
       <a v-else :href="`images/${imgJson.path}/${img.name}`" aria-label="Link to the image">
-        <nuxt-img :src="`images/${imgJson.path}/${img.name}`" alt="A Picture of the model" loading="lazy" />
+        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" />
       </a>
       <ul v-if="img.info?.tagList">
         <li v-for="(tag, index) in img.info.tagList" :key="index">
@@ -36,6 +36,12 @@ export default {
         }
       }
     },
+    getImgUrl(img) {
+      if (process.env.NODE_ENV === 'production')
+        return `images/${this.imgJson.path}/${img.name}`
+      else
+       return `${this.imgJson.path}/${img.name}`
+    }
   },
   mounted() {
     window.addEventListener("scroll", () => this.reveal());

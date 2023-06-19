@@ -117,7 +117,6 @@ export default {
   },
   mounted() {
     const names = imgsJSON[this.imgJson.path]
-    console.log(names)
     names.forEach(name => {
       this.imgJson.imgs.push({ name: name, info: this.igInfo[name] });
     });
