@@ -5,7 +5,7 @@
         <h2>Fotograf:</h2>
         <a href="https://www.instagram.com/czfotografie/" aria-label="Link to the Photographer">
           <h2>czfotografie</h2>
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
+          <InstagramIcon />
         </a>
       </div>
       <p>30 October, 2021</p>

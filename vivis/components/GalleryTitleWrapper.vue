@@ -28,13 +28,33 @@
     column-gap: 2rem;
     row-gap: 0.5rem;
 
+    h2 {
+      margin: auto 0;
+    }
+
     a {
       display: flex;
       gap: 1rem;
 
+
       img {
         height: 2rem;
         width: 2rem;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .galleryTitle {
+    &_wrapper {
+      h2 {
+        display: none;
+      }
+
+      a h2 {
+        display: inline;
       }
     }
   }

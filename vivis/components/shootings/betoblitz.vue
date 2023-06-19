@@ -5,14 +5,14 @@
         <h2>Fotograf:</h2>
         <a href="https://www.instagram.com/blitzeis.fotografie/" aria-label="Link to the Photographer">
           <h2>blitzeis.fotografie</h2>
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
+          <InstagramIcon />
         </a>
       </div>
       <div class="galleryTitle_header">
         <h2>Fotograf:</h2>
         <a href="https://www.instagram.com/betografie/" aria-label="Link to the Photographer">
           <h2>betografie</h2>
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
+          <InstagramIcon />
         </a>
       </div>
       <p>13 October, 2021</p>

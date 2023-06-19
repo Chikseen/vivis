@@ -9,7 +9,7 @@
       <div class="header_content_logos_wrapper">
         <p>Follow Me -></p>
         <a href="https://www.instagram.com/vivis_secrets/" aria-label="Link to the Photographer">
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
+          <InstagramIcon />
         </a>
       </div>
     </div>
@@ -29,7 +29,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center -100px;
   }
 
   &_content {
@@ -75,21 +74,13 @@
           margin: auto 1rem;
         }
       }
-
-      &_icon {
-        width: 4rem;
-      }
     }
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1200px) {
   .header {
     &_img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
       object-position: center -500px;
     }
   }

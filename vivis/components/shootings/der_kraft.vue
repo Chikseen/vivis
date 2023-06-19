@@ -5,7 +5,7 @@
         <h2>Fotograf:</h2>
         <a href="https://www.instagram.com/der_kraft/"  aria-label="Link to the Photographer">
           <h2>der_kraft</h2>
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
+          <InstagramIcon />
         </a>
         <h2>:</h2>
         <a href="https://derkraft-fotografie.de/"  aria-label="Link to the webpage of the Photographer">

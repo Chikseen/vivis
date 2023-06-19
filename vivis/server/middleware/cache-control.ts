@@ -6,5 +6,6 @@ export default defineEventHandler(event => {
 	if (url) {
 	  const maxage = url.match(/(.+)\.(jpg|jpeg|gif|css|png|js|ico|svg|mjs)/) ? year : hour;
 	  res.setHeader('Cache-Control', `max-age=${maxage} s-maxage=${maxage}`);
+	  res.setHeader('Accept-Encoding', `gzip, compress, br`);
 	}
   });

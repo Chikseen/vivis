@@ -2,10 +2,12 @@
   <div class="gallery_wrapper">
     <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery_inactive">
       <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
-        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" />
+        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" sizes="sm:100vw md:50vw lg:400px"
+          densities="1x 2x" />
       </a>
       <a v-else :href="`images/${imgJson.path}/${img.name}`" aria-label="Link to the image">
-        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" />
+        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" sizes="sm:100vw md:50vw lg:400px"
+          densities="1x 2x" />
       </a>
       <ul v-if="img.info?.tagList">
         <li v-for="(tag, index) in img.info.tagList" :key="index">
@@ -40,7 +42,7 @@ export default {
       if (process.env.NODE_ENV === 'production')
         return `images/${this.imgJson.path}/${img.name}`
       else
-       return `${this.imgJson.path}/${img.name}`
+        return `${this.imgJson.path}/${img.name}`
     }
   },
   mounted() {
@@ -106,7 +108,7 @@ export default {
           a {
             white-space: nowrap;
             width: auto;
-            font-size: 0.7rem;
+            font-size: 12px;
             color: $light-background-font-color;
           }
         }
