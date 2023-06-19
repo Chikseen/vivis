@@ -3,15 +3,15 @@
     <GalleryTitleWrapper>
       <div class="galleryTitle_header">
         <h2>Fotograf:</h2>
-        <a href="https://www.instagram.com/ulfleuteritz/">
+        <a href="https://www.instagram.com/ulfleuteritz/" aria-label="Link to the Photographer">
           <h2>ulfleuteritz</h2>
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" />
+          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
         </a>
       </div>
       <p>17 Februar, 2023</p>
     </GalleryTitleWrapper>
 
-    <GalleryWrapper :imgJson="imgJson"/>
+    <GalleryWrapper :imgJson="imgJson" />
   </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
         imgs: [],
       },
       igInfo: {
-        ["IMG_2833.jpg"]: {
+        ["IMG_2833.webp"]: {
           href: "https://www.instagram.com/p/CpDBlzlqR-d/",
           tagList: ["https://www.instagram.com/explore/tags/blackandwhite/",
             "https://www.instagram.com/explore/tags/blackandwhitephotography/",

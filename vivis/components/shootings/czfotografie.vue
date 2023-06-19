@@ -3,9 +3,9 @@
     <GalleryTitleWrapper>
       <div class="galleryTitle_header">
         <h2>Fotograf:</h2>
-        <a href="https://www.instagram.com/czfotografie/">
+        <a href="https://www.instagram.com/czfotografie/" aria-label="Link to the Photographer">
           <h2>czfotografie</h2>
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" />
+          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
         </a>
       </div>
       <p>30 October, 2021</p>
@@ -27,7 +27,7 @@ export default {
         imgs: [],
       },
       igInfo: {
-        ["IMG_0580.jpg"]: {
+        ["IMG_0580.webp"]: {
           href: "https://www.instagram.com/p/CVpzOXevDgW/",
           tagList: ["https://www.instagram.com/explore/tags/Moodyports/",
             "https://www.instagram.com/explore/tags/_fairies_in_dark/",
@@ -53,7 +53,7 @@ export default {
             "https://www.instagram.com/explore/tags/souls_hunters/",
             "https://www.instagram.com/explore/tags/withhumans/"]
         },
-        ["IMG_0640.jpg"]: {
+        ["IMG_0640.webp"]: {
           href: "https://www.instagram.com/p/CNUsrJBHDU0/",
           tagList: ["https://www.instagram.com/explore/tags/followme/",
             "https://www.instagram.com/explore/tags/fotografie/",
@@ -70,7 +70,7 @@ export default {
             "https://www.instagram.com/explore/tags/shooting/",
             "https://www.instagram.com/explore/tags/viral/"]
         },
-        ["IMG_0641.jpg"]: {
+        ["IMG_0641.webp"]: {
           href: "https://www.instagram.com/p/COTJH-pnsp9/",
           tagList: ["https://www.instagram.com/explore/tags/opiumred/",
             "https://www.instagram.com/explore/tags/bayern/",
@@ -90,7 +90,7 @@ export default {
             "https://www.instagram.com/explore/tags/shooting/",
             "https://www.instagram.com/explore/tags/viral/"]
         },
-        ["IMG_0643.jpg"]: {
+        ["IMG_0643.webp"]: {
           href: "https://www.instagram.com/p/CSwQeauM3O7/",
           tagList: ["https://www.instagram.com/explore/tags/akt/",
             "https://www.instagram.com/explore/tags/art/",

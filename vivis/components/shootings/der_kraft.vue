@@ -3,12 +3,12 @@
     <GalleryTitleWrapper>
       <div class="galleryTitle_header">
         <h2>Fotograf:</h2>
-        <a href="https://www.instagram.com/der_kraft/">
+        <a href="https://www.instagram.com/der_kraft/"  aria-label="Link to the Photographer">
           <h2>der_kraft</h2>
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" />
+          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
         </a>
         <h2>:</h2>
-        <a href="https://derkraft-fotografie.de/">
+        <a href="https://derkraft-fotografie.de/"  aria-label="Link to the webpage of the Photographer">
           <h2>https://derkraft-fotografie.de/</h2>
         </a>
       </div>
@@ -30,7 +30,7 @@ export default {
         imgs: [],
       },
       igInfo: {
-        ["2023-02-05_laurichhof_vivian_silhuette_16.jpg"]: {
+        ["2023-02-05_laurichhof_vivian_silhuette_16.webp"]: {
           href: "https://www.instagram.com/p/Cr-OtqwI4nn/",
           tagList: ["https://www.instagram.com/explore/tags/beautifulwomen/",
             "https://www.instagram.com/explore/tags/beauty/",
@@ -55,7 +55,7 @@ export default {
             "https://www.instagram.com/explore/tags/sensitive/",
             "https://www.instagram.com/explore/tags/shooting/"]
         },
-        ["2023-02-05_laurichhof_vivian_silhuette_6.jpg"]: {
+        ["2023-02-05_laurichhof_vivian_silhuette_6.webp"]: {
           href: "https://www.instagram.com/p/CrEFmFoKO_f/",
           tagList: ["https://www.instagram.com/explore/tags/beautifulwomen/",
             "https://www.instagram.com/explore/tags/beauty/",

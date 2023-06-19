@@ -1,6 +1,6 @@
 <template>
   <div class="header_wrapper">
-    <img class="header_img" src="@/assets/staticImages/main/IMG_2687.jpg" alt="" />
+    <img class="header_img" src="@/assets/staticImages/main/IMG_2687.webp" alt="Main background of the webpage" />
     <div class="header_content">
       <div class="header_content_titel">
         <h1 class="header_content_titel_vivis">Vivis</h1>
@@ -8,8 +8,8 @@
       </div>
       <div class="header_content_logos_wrapper">
         <p>Follow Me -></p>
-        <a href="https://www.instagram.com/vivis_secrets/">
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" />
+        <a href="https://www.instagram.com/vivis_secrets/" aria-label="Link to the Photographer">
+          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
         </a>
       </div>
     </div>
@@ -29,12 +29,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center -100px;
   }
 
   &_content {
     position: relative;
     margin: 0 auto;
-    width: calc(100% - 20px); /* Need a specific value to work */
+    width: calc(100% - 20px);
+    /* Need a specific value to work */
     height: 100%;
     max-width: $max-content-width;
 
@@ -54,6 +56,7 @@
       &_vivis {
         animation: 1s ease-out 0s 1 slideInFromLeft;
       }
+
       &_gallery {
         animation: 1s ease-out 0s 1 slideInFromLeft;
       }
@@ -72,9 +75,22 @@
           margin: auto 1rem;
         }
       }
+
       &_icon {
         width: 4rem;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .header {
+    &_img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center -500px;
     }
   }
 }
@@ -89,6 +105,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 400px) {
   .header {
     &_content {
@@ -98,6 +115,7 @@
     }
   }
 }
+
 // For whatever reason but whi knows ?
 @media only screen and (max-width: 200px) {
   .header {

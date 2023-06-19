@@ -18,20 +18,20 @@ function adjustImages(allImages) {
 		const width = metadata.width;
 		const height = metadata.height;
 
-		if (metadata.format != "jpeg" || width > 800 || height > 800) {
+		if (metadata.format != "webp" || width > 800 || height > 800) {
 			console.log("Redo:  " + img);
 
 			if (width > height) image.resize({ width: 800, withoutEnlargement: true });
 			else image.resize({ height: 800, withoutEnlargement: true });
 
 			image
-				.jpeg({
+				.webp({
 					quality: 100,
 					chromaSubsampling: "4:4:4",
 				})
 				.toBuffer()
 				.then((data) => {
-					fs.writeFileSync(img.replace(/\.jpg|\.png|\.JPG|\.PNG|\.JPEG/gm, ".jpeg"), data);
+					fs.writeFileSync(img.replace(/\.jpg|\.png|\.JPG|\.PNG|\.JPEG/gm, ".webp"), data);
 					fs.unlinkSync(img);
 				});
 		}

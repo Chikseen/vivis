@@ -1,10 +1,10 @@
 <template>
   <div class="footer">
-    <a href="https://github.com/Chikseen/vivis">
-      <img class="footer_logo" src="@/assets/logos/GithubLogo.svg" />
+    <a href="https://github.com/Chikseen/vivis" aria-label="Link to the page source code">
+      <img class="footer_logo" src="@/assets/logos/GithubLogo.svg" alt="Instagram Logo"/>
     </a>
-    <a href="https://www.instagram.com/vivis_secrets/">
-      <img class="footer_logo" src="@/assets/logos/InstagramLogo.svg" />
+    <a href="https://www.instagram.com/vivis_secrets/" aria-label="Link to Instagramprofile of the model">
+      <img class="footer_logo" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo"/>
     </a>
     <nuxt-link to="DataPrivacy"> Datenschutz </nuxt-link>
     <nuxt-link to="Impressum"> Impressum </nuxt-link>

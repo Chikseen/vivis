@@ -1,66 +1,60 @@
 <template>
   <div class="menu_wrapper">
     <div class="menu_content">
-      <span
-        :class="['menu_content_item', categorie == 'akt' ? 'menu_content_item_active' : '']"
-        @click="
-          categorie = 'akt';
-          this.$router.push({ name: 'index', query: { shooting: names.S_1.route, categorie: 'akt' } });
-        "
-      >
+      <span :class="['menu_content_item', categorie == 'akt' ? 'menu_content_item_active' : '']" @click="
+        categorie = 'akt';
+      this.$router.push({ name: 'index', query: { shooting: names.S_1.route, categorie: 'akt' } });
+      ">
         <p>Akt</p>
       </span>
-      <span
-        :class="['menu_content_item', categorie == 'fairytale' ? 'menu_content_item_active' : '']"
-        @click="
-          categorie = 'fairytale';
-          this.$router.push({ name: 'index', query: { shooting: names.S_2.route, categorie: 'fairytale' } });
-        "
-      >
+      <span :class="['menu_content_item', categorie == 'fairytale' ? 'menu_content_item_active' : '']" @click="
+        categorie = 'fairytale';
+      this.$router.push({ name: 'index', query: { shooting: names.S_2.route, categorie: 'fairytale' } });
+      ">
         <p>Fairytale</p>
       </span>
-      <span
-        :class="['menu_content_item', categorie == 'portrait' ? 'menu_content_item_active' : '']"
-        @click="
-          categorie = 'portrait';
-          this.$router.push({ name: 'index', query: { shooting: names.S_3.route, categorie: 'portrait' } });
-        "
-      >
+      <span :class="['menu_content_item', categorie == 'portrait' ? 'menu_content_item_active' : '']" @click="
+        categorie = 'portrait';
+      this.$router.push({ name: 'index', query: { shooting: names.S_3.route, categorie: 'portrait' } });
+      ">
         <p>Portrait</p>
       </span>
-      <span
-        :class="['menu_content_item', categorie == 'fashion' ? 'menu_content_item_active' : '']"
-        @click="
-          categorie = 'fashion';
-          this.$router.push({ name: 'index', query: { shooting: names.S_5.route, categorie: 'fashion' } });
-        "
-      >
+      <span :class="['menu_content_item', categorie == 'fashion' ? 'menu_content_item_active' : '']" @click="
+        categorie = 'fashion';
+      this.$router.push({ name: 'index', query: { shooting: names.S_5.route, categorie: 'fashion' } });
+      ">
         <p>Fashion</p>
       </span>
     </div>
     <Transition name="rotateY" mode="out-in">
       <div class="menu_content" v-if="categorie == 'akt'">
-        <NuxtLink :to="redirecter[0]" :class="['menu_content_item', query == names.S_1.route ? 'menu_content_item_active' : '']" @click="this.$router.push({ name: 'index', query: { shooting: names.S_1.route, categorie: 'akt' } })">
-          <p>{{ names.S_1.name }}</p>
-        </NuxtLink>
+        <div :class="['menu_content_item', query == names.S_1.route ? 'menu_content_item_active' : '']">
+          <p @click="this.$router.push({ name: 'index', query: { shooting: names.S_1.route, categorie: 'akt' } })">{{
+            names.S_1.name }}</p>
+        </div>
       </div>
       <div class="menu_content" v-else-if="categorie == 'fairytale'">
-        <NuxtLink :to="redirecter[1]" :class="['menu_content_item', query == names.S_2.route ? 'menu_content_item_active' : '']" @click="this.$router.push({ name: 'index', query: { shooting: names.S_2.route, categorie: 'fairytale' } })">
-          <p>{{ names.S_2.name }}</p>
-        </NuxtLink>
+        <div :class="['menu_content_item', query == names.S_2.route ? 'menu_content_item_active' : '']">
+          <p @click="this.$router.push({ name: 'index', query: { shooting: names.S_2.route, categorie: 'fairytale' } })">
+            {{
+              names.S_2.name }}</p>
+        </div>
       </div>
       <div class="menu_content" v-else-if="categorie == 'portrait'">
-        <NuxtLink :to="redirecter[2]" :class="['menu_content_item', query == names.S_3.route ? 'menu_content_item_active' : '']" @click="this.$router.push({ name: 'index', query: { shooting: names.S_3.route, categorie: 'portrait' } })">
-          <p>{{ names.S_3.name }}</p>
-        </NuxtLink>
-        <NuxtLink :to="redirecter[2]" :class="['menu_content_item', query == names.S_4.route ? 'menu_content_item_active' : '']" @click="this.$router.push({ name: 'index', query: { shooting: names.S_4.route, categorie: 'portrait' } })">
-          <p>{{ names.S_4.name }}</p>
-        </NuxtLink>
+        <div :class="['menu_content_item', query == names.S_3.route ? 'menu_content_item_active' : '']">
+          <p @click="this.$router.push({ name: 'index', query: { shooting: names.S_3.route, categorie: 'portrait' } })">{{
+            names.S_3.name }}</p>
+        </div>
+        <div :class="['menu_content_item', query == names.S_4.route ? 'menu_content_item_active' : '']">
+          <p @click="this.$router.push({ name: 'index', query: { shooting: names.S_4.route, categorie: 'portrait' } })">{{
+            names.S_4.name }}</p>
+        </div>
       </div>
       <div class="menu_content" v-else-if="categorie == 'fashion'">
-        <NuxtLink :to="redirecter[2]" :class="['menu_content_item', query == names.S_5.route ? 'menu_content_item_active' : '']" @click="this.$router.push({ name: 'index', query: { shooting: names.S_5.route, categorie: 'fashion' } })">
-          <p>{{ names.S_5.name }}</p>
-        </NuxtLink>
+        <div :class="['menu_content_item', query == names.S_5.route ? 'menu_content_item_active' : '']">
+          <p @click="this.$router.push({ name: 'index', query: { shooting: names.S_5.route, categorie: 'fashion' } })">{{
+            names.S_5.name }}</p>
+        </div>
       </div>
     </Transition>
   </div>
@@ -123,7 +117,7 @@ export default {
       gap: 1rem;
       transition: ease-out 0.2s all;
       border-radius: 10px;
-      
+
       &_active {
         background-color: $dark-background-color;
 
@@ -157,6 +151,7 @@ a.nuxt-link-active {
   transform: translateY(-200%);
   opacity: 0;
 }
+
 .rotateY-leave-to {
   opacity: 0;
   transform: translateY(100%);

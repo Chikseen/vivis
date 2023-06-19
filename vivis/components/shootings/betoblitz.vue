@@ -3,16 +3,16 @@
     <GalleryTitleWrapper>
       <div class="galleryTitle_header">
         <h2>Fotograf:</h2>
-        <a href="https://www.instagram.com/blitzeis.fotografie/">
+        <a href="https://www.instagram.com/blitzeis.fotografie/" aria-label="Link to the Photographer">
           <h2>blitzeis.fotografie</h2>
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" />
+          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
         </a>
       </div>
       <div class="galleryTitle_header">
         <h2>Fotograf:</h2>
-        <a href="https://www.instagram.com/betografie/">
+        <a href="https://www.instagram.com/betografie/" aria-label="Link to the Photographer">
           <h2>betografie</h2>
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" />
+          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
         </a>
       </div>
       <p>13 October, 2021</p>
@@ -32,7 +32,7 @@ export default {
         imgs: [],
       },
       igInfo: {
-        ["IMG_0009.jpg"]: {
+        ["IMG_0009.webp"]: {
           href: "https://www.instagram.com/p/CTPRQ4sMC9p/",
           tagList: ["https://www.instagram.com/explore/tags/chemnitz/",
             "https://www.instagram.com/explore/tags/leipzig/",
@@ -44,7 +44,7 @@ export default {
             "https://www.instagram.com/explore/tags/tfpmodel/",
             "https://www.instagram.com/explore/tags/tfpshooting/"]
         },
-        ["IMG_0011.jpg"]: {
+        ["IMG_0011.webp"]: {
           href: "https://www.instagram.com/p/CTjfsWtoc6K/",
           tagList: ["https://www.instagram.com/explore/tags/chemnitz/",
             "https://www.instagram.com/explore/tags/followme/",
@@ -64,7 +64,7 @@ export default {
             "https://www.instagram.com/explore/tags/viral/",
             "https://www.instagram.com/explore/tags/viral/",]
         },
-        ["IMG_0022.jpg"]: {
+        ["IMG_0022.webp"]: {
           href: "https://www.instagram.com/p/CTPb4HQo8Yc/",
           tagList: ["https://www.instagram.com/explore/tags/chemnitz/",
             "https://www.instagram.com/explore/tags/followme/",

@@ -3,14 +3,14 @@
     <GalleryTitleWrapper>
       <div class="galleryTitle_header">
         <h2>Fotograf:</h2>
-        <a href="https://www.instagram.com/blickwinkelpictures/">
+        <a href="https://www.instagram.com/blickwinkelpictures/" aria-label="Link to the Photographer">
           <h2>blickwinkelpictures</h2>
-          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" />
+          <img class="header_content_logos_icon" src="@/assets/logos/InstagramLogo.svg" alt="Instagram Logo" />
         </a>
       </div>
       <p>13 August, 2022</p>
     </GalleryTitleWrapper>
-    <GalleryWrapper :imgJson="imgJson"/>
+    <GalleryWrapper :imgJson="imgJson" />
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
         imgs: [],
       },
       igInfo: {
-        ["67CB5DEA-C4E2-43B6-993C-92D51267C303.jpg"]: {
+        ["67CB5DEA-C4E2-43B6-993C-92D51267C303.webp"]: {
           href: "https://www.instagram.com/p/CkOIXm3oCwr/",
           tagList: ["https://www.instagram.com/explore/tags/@blickwinkelportraits/",
             "https://www.instagram.com/explore/tags/autumn/",
@@ -34,7 +34,7 @@ export default {
             "https://www.instagram.com/explore/tags/portraitphotography/",
             "https://www.instagram.com/explore/tags/shooting/"]
         },
-        ["B039F301-9DF2-4EE8-B076-2EBC49147609.jpg"]: {
+        ["B039F301-9DF2-4EE8-B076-2EBC49147609.webp"]: {
           href: "https://www.instagram.com/p/CkuxMbSIl9v/",
           tagList: ["https://www.instagram.com/explore/tags/@blickwinkelportraits/",
             "https://www.instagram.com/explore/tags/autumn/",
@@ -44,7 +44,7 @@ export default {
             "https://www.instagram.com/explore/tags/schlosspark/",
             "https://www.instagram.com/explore/tags/shooting/"]
         },
-        ["dsc07735.jpg"]: {
+        ["dsc07735.webp"]: {
           href: "https://www.instagram.com/p/CkGDls3I9dK/",
           tagList: ["https://www.instagram.com/explore/tags/@blickwinkelportraits/",
             "https://www.instagram.com/explore/tags/autumn/",

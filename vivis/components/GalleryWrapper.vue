@@ -1,15 +1,18 @@
 <template>
   <div class="gallery_wrapper">
     <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery_inactive">
-      <a v-if="img.info?.href" :href="img.info?.href">
-        <img :src="`images/${imgJson.path}/${img.name}`" alt="just a test image" loading="lazy" />
+      <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
+        <nuxt-img :src="`${imgJson.path}/${img.name}`" alt="A Picture of the model" loading="lazy" />
       </a>
-      <a v-else :href="`images/${imgJson.path}/${img.name}`">
-        <img :src="`images/${imgJson.path}/${img.name}`" alt="" loading="lazy">
+      <a v-else :href="`images/${imgJson.path}/${img.name}`" aria-label="Link to the image">
+        <nuxt-img :src="`${imgJson.path}/${img.name}`" alt="A Picture of the model" loading="lazy" />
       </a>
-      <h5 v-if="img.info?.tagList">
-        <a v-for="(tag, index) in img.info.tagList" :key="index" :href="tag">{{ "#" + tag.replaceAll("/", "").replace("https:www.instagram.comexploretags", "") }}</a>
-      </h5>
+      <ul v-if="img.info?.tagList">
+        <li v-for="(tag, index) in img.info.tagList" :key="index">
+          <a :href="tag" aria-label="Link to the Hashtag">
+            {{ "#" + tag.replaceAll("/", "").replace("https:www.instagram.comexploretags", "") }}</a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -35,8 +38,6 @@ export default {
     },
   },
   mounted() {
-
-
     window.addEventListener("scroll", () => this.reveal());
     this.reveal();
   },
@@ -74,6 +75,7 @@ export default {
     img {
       min-width: 9rem;
       width: 100%;
+      height: auto;
       max-width: 40rem;
       object-fit: cover;
       border-radius: 10px;
@@ -86,16 +88,21 @@ export default {
       max-width: 40rem;
       margin: 0 auto;
 
-      h5 {
+      ul {
         display: flex;
         flex-wrap: wrap;
         gap: 0.2rem;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
 
-        a {
-          white-space: nowrap;
-          width: auto;
-          font-size: 0.7rem;
-          color: $light-background-font-color;
+        li {
+          a {
+            white-space: nowrap;
+            width: auto;
+            font-size: 0.7rem;
+            color: $light-background-font-color;
+          }
         }
       }
     }

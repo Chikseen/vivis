@@ -10,8 +10,8 @@ export default {
   data() {
     return {};
   },
-  created() {},
-  mounted() {},
+  created() { },
+  mounted() { },
 };
 </script>
 
@@ -22,8 +22,10 @@ html {
   padding: 0;
   overflow-x: hidden;
   font-family: cf;
+  font-display: swap;
   background-color: $dark-background-color;
 }
+
 h1,
 h2,
 h3,
@@ -32,10 +34,12 @@ h5,
 h6 {
   margin: 0;
 }
+
 p {
   margin: 0;
   font-size: 1.2rem;
 }
+
 a {
   text-decoration: none;
 }
@@ -62,13 +66,16 @@ img {
   height: 10px;
   position: absolute;
 }
+
 ::-webkit-scrollbar-track {
   background: #ffffff00;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #3f3f3f;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #303030;
 }
@@ -78,6 +85,7 @@ img {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -87,6 +95,7 @@ img {
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -96,9 +105,9 @@ img {
   0% {
     transform: translateY(-200%);
   }
+
   100% {
     transform: translateX(0);
   }
 }
-
 </style>
