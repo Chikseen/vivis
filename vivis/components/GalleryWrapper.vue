@@ -5,7 +5,7 @@
         <nuxt-img :src="`${imgJson.path}/${img.name}`" alt="A Picture of the model" loading="lazy" />
       </a>
       <a v-else :href="`images/${imgJson.path}/${img.name}`" aria-label="Link to the image">
-        <nuxt-img :src="`${imgJson.path}/${img.name}`" alt="A Picture of the model" loading="lazy" />
+        <nuxt-img :src="`images/${imgJson.path}/${img.name}`" alt="A Picture of the model" loading="lazy" />
       </a>
       <ul v-if="img.info?.tagList">
         <li v-for="(tag, index) in img.info.tagList" :key="index">
