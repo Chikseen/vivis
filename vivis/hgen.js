@@ -1,4 +1,4 @@
-const h = "#fashion #fashionshooting #couture #dress #creme #brownhair #femalemodel #beauty #beautifulwomen #derkraft #dresden #photography #photooftheday #redlips #intensiveeyes #inkedgirls #sensitive #jinbeisfavoriten #fujifilmxt3 #editwithus #captureone";
+const h = "#hasenland_union #filigreemagazine #bayerischeportraits #portrait_vision #meetup #portraits #portraitshoot #portraitstream #dress #curlyhair #hasenland #portratos #deutschemodels #germanportraiture #modelsinc #deutschefotografen #shootingto #portrait.beauties #art #dynamicportraits #insta_portrait #explorepage #explore";
 
 let arr = h.split("#").filter((t) => t != "");
 arr = arr.sort();
@@ -6,7 +6,7 @@ arr = arr.map((t) => (t = t.trim()));
 
 let tagList = [];
 arr.forEach((t) => {
-  tagList.push(`<a href="https://www.instagram.com/explore/tags/${t}/">#${t}</a>\n`);
+	tagList.push(`"https://www.instagram.com/explore/tags/${t}/",\n`);
 });
 
 console.log(tagList.join(""));

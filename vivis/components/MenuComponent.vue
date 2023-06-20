@@ -39,6 +39,11 @@
             {{
               names.S_2.name }}</p>
         </div>
+        <div :class="['menu_content_item', query == names.S_6.route ? 'menu_content_item_active' : '']">
+          <p @click="this.$router.push({ name: 'index', query: { shooting: names.S_6.route, categorie: 'fairytale' } })">
+            {{
+              names.S_6.name }}</p>
+        </div>
       </div>
       <div class="menu_content" v-else-if="categorie == 'portrait'">
         <div :class="['menu_content_item', query == names.S_3.route ? 'menu_content_item_active' : '']">
@@ -48,6 +53,14 @@
         <div :class="['menu_content_item', query == names.S_4.route ? 'menu_content_item_active' : '']">
           <p @click="this.$router.push({ name: 'index', query: { shooting: names.S_4.route, categorie: 'portrait' } })">{{
             names.S_4.name }}</p>
+        </div>
+        <div :class="['menu_content_item', query == names.S_7.route ? 'menu_content_item_active' : '']">
+          <p @click="this.$router.push({ name: 'index', query: { shooting: names.S_7.route, categorie: 'portrait' } })">{{
+            names.S_7.name }}</p>
+        </div>
+        <div :class="['menu_content_item', query == names.S_8.route ? 'menu_content_item_active' : '']">
+          <p @click="this.$router.push({ name: 'index', query: { shooting: names.S_8.route, categorie: 'portrait' } })">{{
+            names.S_8.name }}</p>
         </div>
       </div>
       <div class="menu_content" v-else-if="categorie == 'fashion'">
