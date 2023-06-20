@@ -48,7 +48,7 @@ export default defineNuxtConfig({
 				{
 					hid: "description_main",
 					name: "description",
-					content: "Wegpage for the Model Vivi",
+					content: "Official Wegpage for the Model Vivi",
 				},
 				{
 					hid: "keywords_main",
