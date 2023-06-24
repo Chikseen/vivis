@@ -28,15 +28,36 @@ export default {
       igInfo: {
         ["IMG_2833.webp"]: {
           href: "https://www.instagram.com/p/CpDBlzlqR-d/",
-          tagList: ["https://www.instagram.com/explore/tags/blackandwhite/",
-            "https://www.instagram.com/explore/tags/blackandwhitephotography/",
-            "https://www.instagram.com/explore/tags/leipzig/",
-            "https://www.instagram.com/explore/tags/model/",
-            "https://www.instagram.com/explore/tags/portrait/",
-            "https://www.instagram.com/explore/tags/portraitphotography/",
-            "https://www.instagram.com/explore/tags/pretty/",
-            "https://www.instagram.com/explore/tags/shooting/",
-            "https://www.instagram.com/explore/tags/sw/"]
+          tagList: ["blackandwhite",
+            "blackandwhitephotography",
+            "leipzig",
+            "model",
+            "portrait",
+            "portraitphotography",
+            "pretty",
+            "shooting",
+            "sw"]
+        },
+        ["IMG_2804.webp"]: {
+          isPortrait: true
+        },
+        ["IMG_2813.webp"]: {
+          isPortrait: true
+        },
+        ["IMG_3472.webp"]: {
+          isPortrait: true
+        },
+        ["IMG_3476.webp"]: {
+          isPortrait: true
+        },
+        ["IMG_3564.webp"]: {
+          isPortrait: true
+        },
+        ["IMG_3565.webp"]: {
+          isPortrait: true
+        },
+        ["IMG_3566.webp"]: {
+          isPortrait: true
         },
       }
     }

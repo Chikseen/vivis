@@ -28,20 +28,33 @@ export default {
 			igInfo: {
 				["IMG_3521.webp"]: {
 					href: "https://www.instagram.com/p/Ctb7V08qvWC/",
-					tagList: ["https://www.instagram.com/explore/tags/divineports/",
-						"https://www.instagram.com/explore/tags/fairytail/",
-						"https://www.instagram.com/explore/tags/fairytale/",
-						"https://www.instagram.com/explore/tags/portrait_perfection/",
-						"https://www.instagram.com/explore/tags/portraitliebe/",
-						"https://www.instagram.com/explore/tags/portraitlove/",
-						"https://www.instagram.com/explore/tags/portraitpage/",
-						"https://www.instagram.com/explore/tags/portraitphotography/",
-						"https://www.instagram.com/explore/tags/portraits/",
-						"https://www.instagram.com/explore/tags/portraitsmadeingermany/",
-						"https://www.instagram.com/explore/tags/portraitsoup/",
-						"https://www.instagram.com/explore/tags/ports_hd/",
-						"https://www.instagram.com/explore/tags/portshd/",
-						"https://www.instagram.com/explore/tags/portsinspired/"]
+					isPortrait: true,
+					tagList: ["divineports",
+						"fairytail",
+						"fairytale",
+						"portrait_perfection",
+						"portraitliebe",
+						"portraitlove",
+						"portraitpage",
+						"portraitphotography",
+						"portraits",
+						"portraitsmadeingermany",
+						"portraitsoup",
+						"ports_hd",
+						"portshd",
+						"portsinspired"]
+				},
+				["IMG_0487.webp"]: {
+					isPortrait: true,
+				},
+				["IMG_0490.webp"]: {
+					isPortrait: true,
+				},
+				["IMG_0492.webp"]: {
+					isPortrait: true,
+				},
+				["IMG_0493.webp"]: {
+					isPortrait: true,
 				},
 			}
 		}

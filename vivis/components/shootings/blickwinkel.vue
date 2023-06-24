@@ -27,31 +27,31 @@ export default {
       igInfo: {
         ["67CB5DEA-C4E2-43B6-993C-92D51267C303.webp"]: {
           href: "https://www.instagram.com/p/CkOIXm3oCwr/",
-          tagList: ["https://www.instagram.com/explore/tags/@blickwinkelportraits/",
-            "https://www.instagram.com/explore/tags/autumn/",
-            "https://www.instagram.com/explore/tags/germany/",
-            "https://www.instagram.com/explore/tags/model/",
-            "https://www.instagram.com/explore/tags/portraitphotography/",
-            "https://www.instagram.com/explore/tags/shooting/"]
+          isPortrait: true,
+          tagList: ["autumn",
+            "germany",
+            "model",
+            "portraitphotography",
+            "shooting"]
         },
         ["B039F301-9DF2-4EE8-B076-2EBC49147609.webp"]: {
           href: "https://www.instagram.com/p/CkuxMbSIl9v/",
-          tagList: ["https://www.instagram.com/explore/tags/@blickwinkelportraits/",
-            "https://www.instagram.com/explore/tags/autumn/",
-            "https://www.instagram.com/explore/tags/germany/",
-            "https://www.instagram.com/explore/tags/leaf/",
-            "https://www.instagram.com/explore/tags/orange/",
-            "https://www.instagram.com/explore/tags/schlosspark/",
-            "https://www.instagram.com/explore/tags/shooting/"]
+          isPortrait: true,
+          tagList: ["autumn",
+            "germany",
+            "leaf",
+            "orange",
+            "schlosspark",
+            "shooting"]
         },
         ["dsc07735.webp"]: {
           href: "https://www.instagram.com/p/CkGDls3I9dK/",
-          tagList: ["https://www.instagram.com/explore/tags/@blickwinkelportraits/",
-            "https://www.instagram.com/explore/tags/autumn/",
-            "https://www.instagram.com/explore/tags/germany/",
-            "https://www.instagram.com/explore/tags/model/",
-            "https://www.instagram.com/explore/tags/portraitphotography/",
-            "https://www.instagram.com/explore/tags/shooting/"]
+          isPortrait: true,
+          tagList: ["autumn",
+            "germany",
+            "model",
+            "portraitphotography",
+            "shooting"]
         },
       }
     }

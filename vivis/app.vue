@@ -62,8 +62,8 @@ img {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 0;
+  height: 0;
   position: absolute;
 }
 
@@ -73,7 +73,7 @@ img {
 
 ::-webkit-scrollbar-thumb {
   background: #3f3f3f;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

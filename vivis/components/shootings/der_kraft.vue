@@ -3,12 +3,12 @@
     <GalleryTitleWrapper>
       <div class="galleryTitle_header">
         <h2>Fotograf:</h2>
-        <a href="https://www.instagram.com/der_kraft/"  aria-label="Link to the Photographer">
+        <a href="https://www.instagram.com/der_kraft/" aria-label="Link to the Photographer">
           <h2>der_kraft</h2>
           <InstagramIcon />
         </a>
         <h2>:</h2>
-        <a href="https://derkraft-fotografie.de/"  aria-label="Link to the webpage of the Photographer">
+        <a href="https://derkraft-fotografie.de/" aria-label="Link to the webpage of the Photographer">
           <h2>https://derkraft-fotografie.de/</h2>
         </a>
       </div>
@@ -32,52 +32,66 @@ export default {
       igInfo: {
         ["2023-02-05_laurichhof_vivian_silhuette_16.webp"]: {
           href: "https://www.instagram.com/p/Cr-OtqwI4nn/",
-          tagList: ["https://www.instagram.com/explore/tags/beautifulwomen/",
-            "https://www.instagram.com/explore/tags/beauty/",
-            "https://www.instagram.com/explore/tags/brownhair/",
-            "https://www.instagram.com/explore/tags/captureone/",
-            "https://www.instagram.com/explore/tags/couture/",
-            "https://www.instagram.com/explore/tags/creme/",
-            "https://www.instagram.com/explore/tags/derkraft/",
-            "https://www.instagram.com/explore/tags/dresden/",
-            "https://www.instagram.com/explore/tags/dress/",
-            "https://www.instagram.com/explore/tags/editwithus/",
-            "https://www.instagram.com/explore/tags/fashion/",
-            "https://www.instagram.com/explore/tags/fashionshooting/",
-            "https://www.instagram.com/explore/tags/femalemodel/",
-            "https://www.instagram.com/explore/tags/fujifilmxt3/",
-            "https://www.instagram.com/explore/tags/inkedgirls/",
-            "https://www.instagram.com/explore/tags/intensiveeyes/",
-            "https://www.instagram.com/explore/tags/jinbeisfavoriten/",
-            "https://www.instagram.com/explore/tags/photography/",
-            "https://www.instagram.com/explore/tags/photooftheday/",
-            "https://www.instagram.com/explore/tags/redlips/",
-            "https://www.instagram.com/explore/tags/sensitive/",
-            "https://www.instagram.com/explore/tags/shooting/"]
+          isPortrait: true,
+          tagList: ["beautifulwomen",
+            "beauty",
+            "brownhair",
+            "captureone",
+            "couture",
+            "creme",
+            "derkraft",
+            "dresden",
+            "dress",
+            "editwithus",
+            "fashion",
+            "fashionshooting",
+            "femalemodel",
+            "fujifilmxt3",
+            "inkedgirls",
+            "intensiveeyes",
+            "jinbeisfavoriten",
+            "photography",
+            "photooftheday",
+            "redlips",
+            "sensitive",
+            "shooting"]
         },
         ["2023-02-05_laurichhof_vivian_silhuette_6.webp"]: {
+          isPortrait: true,
           href: "https://www.instagram.com/p/CrEFmFoKO_f/",
-          tagList: ["https://www.instagram.com/explore/tags/beautifulwomen/",
-            "https://www.instagram.com/explore/tags/beauty/",
-            "https://www.instagram.com/explore/tags/brownhair/",
-            "https://www.instagram.com/explore/tags/captureone/",
-            "https://www.instagram.com/explore/tags/couture/",
-            "https://www.instagram.com/explore/tags/creme/",
-            "https://www.instagram.com/explore/tags/derkraft/",
-            "https://www.instagram.com/explore/tags/dresden/",
-            "https://www.instagram.com/explore/tags/dress/",
-            "https://www.instagram.com/explore/tags/editwithus/",
-            "https://www.instagram.com/explore/tags/fashion/",
-            "https://www.instagram.com/explore/tags/fashionshooting/",
-            "https://www.instagram.com/explore/tags/femalemodel/",
-            "https://www.instagram.com/explore/tags/fujifilmxt3/",
-            "https://www.instagram.com/explore/tags/inkedgirls/",
-            "https://www.instagram.com/explore/tags/intensiveeyes/",
-            "https://www.instagram.com/explore/tags/jinbeisfavoriten/",
-            "https://www.instagram.com/explore/tags/photography/",
-            "https://www.instagram.com/explore/tags/photooftheday/",
-            "https://www.instagram.com/explore/tags/redlips/",
-            "https://www.instagram.com/explore/tags/sensitive/"]
+          tagList: ["beautifulwomen",
+            "beauty",
+            "brownhair",
+            "captureone",
+            "couture",
+            "creme",
+            "derkraft",
+            "dresden",
+            "dress",
+            "editwithus",
+            "fashion",
+            "fashionshooting",
+            "femalemodel",
+            "fujifilmxt3",
+            "inkedgirls",
+            "intensiveeyes",
+            "jinbeisfavoriten",
+            "photography",
+            "photooftheday",
+            "redlips",
+            "sensitive"]
+        },
+        ["2023-02-05_laurichhof_vivian_silhuette_5.webp"]: {
+          isPortrait: true,
+        },
+        ["2023-02-05_laurichhof_vivian_silhuette_13.webp"]: {
+          isPortrait: true,
+        },
+        ["2023-02-05_laurichhof_vivian_silhuette_14.webp"]: {
+          isPortrait: true,
+        },
+        ["2023-02-05_laurichhof_vivian_silhuette_23.webp"]: {
+          isPortrait: true,
         },
       }
     }

@@ -1,40 +1,64 @@
 <template>
-  <Transition name="fade" mode="out-in">
-    <czfotografie v-if="query == names.S_1.route" key="1"></czfotografie>
-    <betoblitz v-else-if="query == names.S_2.route" key="2"></betoblitz>
-    <blickwinkel v-else-if="query == names.S_3.route" key="3"></blickwinkel>
-    <ulfleuteritz v-else-if="query == names.S_4.route" key="4"></ulfleuteritz>
-    <der_kraft v-else-if="query == names.S_5.route" key="5"></der_kraft>
-    <kontrastreich20 v-else-if="query == names.S_6.route" key="6"></kontrastreich20>
-    <chris_del_trip v-else-if="query == names.S_7.route" key="7"></chris_del_trip>
-    <manuel_r_portraits v-else-if="query == names.S_8.route" key="8"></manuel_r_portraits>
-  </Transition>
+  <div v-for="(categorie, index) in config.categories" :key="index">
+    <div v-if="categorie.id == selectedCategorie">
+      <component v-for="(route, index) in categorie.routes" :key="index" :is="route" class="shooting"></component>
+    </div>
+  </div>
+  <!--
+    
+    <Transition name="fade" mode="out-in">
+    </Transition>
+-->
 </template>
 
 <script>
+import betoblitz from "@/components/shootings/betoblitz.vue"
+import blickwinkel from "@/components/shootings/blickwinkel.vue"
+import chris_del_trip from "@/components/shootings/chris_del_trip.vue"
+import czfotografie from "@/components/shootings/czfotografie.vue"
+import der_kraft from "@/components/shootings/der_kraft.vue"
+import kontrastreich20 from "@/components/shootings/kontrastreich20.vue"
+import manuel_r_portraits from "@/components/shootings/manuel_r_portraits.vue"
+import ulfleuteritz from "@/components/shootings/ulfleuteritz.vue"
+
 export default {
+  components: {
+    betoblitz,
+    blickwinkel,
+    chris_del_trip,
+    czfotografie,
+    der_kraft,
+    kontrastreich20,
+    manuel_r_portraits,
+    ulfleuteritz
+  },
   data() {
     return {
       names: {},
-      query: "czfotografie",
+      selectedCategorie: "TEST",
     };
   },
   watch: {
     $route() {
-      this.query = this.$route.query.shooting;
+      this.selectedCategorie = this.$route.query.categorie;
     },
   },
   created() {
     const runtimeConfig = useRuntimeConfig();
-    this.names = runtimeConfig.public;
+    this.config = runtimeConfig.public;
   },
   mounted() {
-    this.query = this.$route.query.shooting;
+    this.selectedCategorie = this.$route.query.categorie;
   },
 };
 </script>
 
 <style lang="scss">
+.shooting {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.25s ease;
