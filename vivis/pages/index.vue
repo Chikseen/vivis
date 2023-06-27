@@ -1,13 +1,13 @@
 <template>
-  <fairytale />
+  <Fairytale />
 </template>
 
 <script>
-import fairytale from "@/pages/fairytale.vue"
+import Fairytale from "@/pages/Fairytale.vue"
 
 export default {
   components: {
-    fairytale
+    Fairytale
   }
 };
 </script>
