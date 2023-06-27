@@ -1,6 +1,6 @@
 <template>
   <div class="gallery_wrapper">
-    <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery_inactive"
+    <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery"
       :style="img.info?.isPortrait ? 'grid-row: span 2' : ''">
       <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
         <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" sizes="sm:100vw md:50vw lg:400px"
@@ -55,24 +55,7 @@ export default {
 
 <style lang="scss">
 .gallery {
-  &_inactive {
-    position: relative;
-
-    h5 {
-      transform: translateY(-150%);
-      opacity: 0;
-      z-index: -10 !important;
-      transition: all 1s ease-in-out;
-      transition-delay: 0.1s;
-    }
-  }
-
-  &_active {
-    h5 {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+  position: relative;
 
   &_image {
     &_overlay {
@@ -81,7 +64,7 @@ export default {
         bottom: 0;
         left: 0;
         width: calc(100% - 1rem);
-        max-height: 3rem;
+        max-height: 2rem;
         display: flex;
         flex-wrap: wrap;
         background: linear-gradient(35deg, #424242 0%, #414141c0 20%, #41414100 40%);
@@ -90,7 +73,7 @@ export default {
         margin: 0;
         padding: 0.5rem;
         list-style-type: none;
-        transition: 1s all;
+        transition: 0.25s all;
         overflow: hidden;
 
         li {
@@ -112,13 +95,12 @@ export default {
         &::before {
           content: "";
           background: url("@/assets/logos/InstagramLogo.svg");
-          background-size: 3rem 3rem;
+          background-size: 2rem 2rem;
           background-repeat: no-repeat;
           width: 100%;
-          height: 3rem;
-          opacity: 1;
+          height: 2rem;
           transition: 0.5s all;
-        }        
+        }
       }
     }
   }
@@ -131,6 +113,8 @@ export default {
     margin: 0 auto;
     gap: 2rem;
     padding: 2rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
 
     div {
       display: flex;

@@ -1,41 +1,21 @@
 <template>
   <div class="menu_wrapper">
     <div class="menu_content">
-      <span v-for="(categorie, index) in config.categories" :key="index"
-        :class="['menu_content_item', selectedCategorie == categorie.id ? 'menu_content_item_active' : '']" @click="
-          selectedCategorie = categorie.id; this.$router.push({ name: 'index', query: { categorie: categorie.id } });">
-        <p>{{ categorie.displayName }}</p>
+      <span v-for="(categorie, index) in categories" :key="index" class="menu_content_item">
+        <NuxtLink :to="categorie">{{ categorie.replace("_", "") }}</NuxtLink>
       </span>
     </div>
   </div>
 </template>
 
 <script>
+import img from "@/imgs.json"
+
 export default {
   data() {
     return {
-      redirecter: [],
-      selectedCategorie: "fairytale",
-      config: null,
-      allShootings: []
+      categories: img._categories
     };
-  },
-  watch: {
-    $route() {
-      this.selectedShooting = this.$route.query.shooting;
-    },
-  },
-  created() {
-    const runtimeConfig = useRuntimeConfig();
-    this.config = runtimeConfig.public
-  },
-  mounted() {
-    // It is set to redirect but if JS is enabeled it will deactivate this function
-    this.redirecter = [];
-    if (!this.$route.query.categorie) {
-      this.$route.query.categorie = "fairytale";
-    }
-    this.selectedCategorie = this.$route.query.categorie;
   },
 };
 </script>
@@ -44,7 +24,9 @@ export default {
 .menu {
   &_wrapper {
     background-color: $main-background-color;
-    padding: 10px 5px 10px 5px;
+    box-shadow: $image-shadow;
+    border-radius: 0 0 15px 15px;
+    padding: 10px 0;
     max-width: $max-content-width;
     margin: 5px auto;
     overflow: hidden;
@@ -52,42 +34,36 @@ export default {
 
   &_content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     overflow-x: auto;
     overflow-y: hidden;
-    margin: 5px 0;
+    margin: 0;
+
 
     &_item {
-      min-width: max-content;
-      padding: 1rem;
-      margin: 0 auto;
-      gap: 1rem;
-      transition: ease-out 0.2s all;
-      border-radius: 10px;
+      padding: 0.75rem;
+      margin: 0.25rem;
 
-      &_active {
-        background-color: $dark-background-color;
-
-        p {
-          color: $light-font-color !important;
-        }
-      }
-
-      p {
+      a {
         color: $main-font-color;
-        width: fit-content;
-        margin: 0 auto;
+        min-width: max-content;
+        margin: 0.25rem;
         font-weight: 600;
         transition: ease-out 0.2s all;
         font-size: 1rem;
+        padding: 0.75rem;
+        margin: 0.25rem;
+        border-radius: 10px;
       }
     }
   }
 }
 
-a.nuxt-link-active {
-  font-weight: bold;
+.router-link-exact-active {
+  background-color: $dark-background-color;
+  color: $light-font-color !important;
 }
+
 
 .rotateY-enter-active,
 .rotateY-leave-active {

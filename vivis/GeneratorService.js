@@ -5,6 +5,7 @@ const sharp = require("sharp");
 
 // global
 const workDir = path.join(__dirname, "public/images");
+const workDirCategories = path.join(__dirname, "pages");
 
 const allImages = getAllImagePaths();
 adjustImages(allImages);
@@ -56,6 +57,13 @@ function getAllImagePaths() {
 			imagePathList.push(imgPath);
 		});
 	});
+
+	let categories = fs.readdirSync(workDirCategories);
+	categories = categories.map((c) => c.replace(".vue", ""));
+	const toBeExcluded = ["DataPrivacy", "Impressum", "index"];
+	categories = categories.filter((c) => !toBeExcluded.includes(c));
+	imgsJSON._categories = categories;
+
 	fs.writeFileSync(path.join(__dirname, "imgs.json"), JSON.stringify(imgsJSON));
 	return imagePathList;
 }

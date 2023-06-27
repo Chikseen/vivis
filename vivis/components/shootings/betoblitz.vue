@@ -95,7 +95,7 @@ export default {
       }
     }
   },
-  mounted() {
+  created() {
     const names = imgsJSON[this.imgJson.path]
     names.forEach(name => {
       this.imgJson.imgs.push({ name: name, info: this.igInfo[name] });

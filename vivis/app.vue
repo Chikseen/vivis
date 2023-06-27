@@ -1,8 +1,10 @@
 <template>
-  <HeaderComponent />
-  <MenuComponent />
-  <NuxtPage />
-  <Footer />
+  <div>
+    <HeaderComponent />
+    <MenuComponent />
+    <NuxtPage />
+    <Footer />
+  </div>
 </template>
 
 <script>

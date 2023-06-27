@@ -23,33 +23,6 @@ export default defineNuxtConfig({
 			S_6: { name: "kontrastreich20", route: "kontrastreich20" },
 			S_7: { name: "chris_del_trip", route: "chris_del_trip" },
 			S_8: { name: "manuel_r_portraits", route: "manuel_r_portraits" },
-			categories: [
-				{
-					displayName: "Fairytale",
-					id: "fairytale",
-					routes: ["betoblitz", "blickwinkelpictures", "kontrastreich20"],
-				},
-				{
-					displayName: "Portrait",
-					id: "portrait",
-					routes: ["ulfleuteritz"],
-				},
-				{
-					displayName: "Akt",
-					id: "akt",
-					routes: ["czfotografie"],
-				},
-				{
-					displayName: "Fashion",
-					id: "fashion",
-					routes: ["der_kraft" ],
-				},
-				{
-					displayName: "Hasenland 2023",
-					id: "hasenland23",
-					routes: ["chris_del_trip", "manuel_r_portraits" ],
-				},
-			],
 		},
 	},
 	components: [{ path: "~/components", pathPrefix: false }],
@@ -69,7 +42,7 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			htmlAttrs: {
-				lang: "en",
+				lang: "de",
 			},
 			title: "Vivis",
 			meta: [
@@ -83,7 +56,7 @@ export default defineNuxtConfig({
 				{
 					hid: "keywords_main",
 					name: "keywords",
-					content: "Vivis, Vivis.Secret, Vivis.Gallery, Model, Shotting",
+					content: "Vivis, Vivis.Secret, Vivis.Gallery, Model, Shooting, Gallery, Images, Image Collection, Photos, Vivi",
 				},
 				{ hid: "author_main", name: "author", content: "Tim Menzel" },
 			],
