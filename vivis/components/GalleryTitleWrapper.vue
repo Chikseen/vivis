@@ -23,6 +23,13 @@
       color: $light-font-color;
       white-space: nowrap;
     }
+
+    &::after {
+      content: "See more ->";
+      position: absolute;
+      top: 50%;
+      right: 10%;
+    }
   }
 
   &_header {

@@ -28,16 +28,17 @@ export default {
     border-radius: 0 0 15px 15px;
     padding: 10px 0;
     max-width: $max-content-width;
+    width: 100%;
     margin: 5px auto;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
   &_content {
     display: flex;
     justify-content: space-evenly;
-    overflow-x: auto;
-    overflow-y: hidden;
-    margin: 0;
+    margin: 0 auto;
+    width: fit-content;
 
 
     &_item {

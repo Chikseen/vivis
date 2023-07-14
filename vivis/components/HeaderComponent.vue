@@ -12,6 +12,10 @@
           <InstagramIcon />
         </a>
       </div>
+      <div class="header_content_scrollhint">
+        <p class="header_content_scrollhint_arrow">-></p>
+        <p>See more</p>
+      </div>
     </div>
   </div>
 </template>
@@ -66,13 +70,33 @@
         position: absolute;
         display: flex;
         bottom: 1rem;
-        right: 1rem;
+        right: 10%;
+        height: 3rem;
         animation: 1s ease-out 0s 1 slideInFromRight;
 
         p {
           color: $light-font-color;
           margin: auto 1rem;
         }
+      }
+    }
+
+    &_scrollhint {
+      position: absolute;
+      bottom: 1rem;
+      left: 10%;
+      display: flex;
+      height: 3rem;
+      gap: 1rem;
+
+      &_arrow {
+        color: $light-font-color;
+        margin: auto 1rem;
+        transform: rotateZ(90deg);
+      }
+
+      p {
+        margin: auto;
       }
     }
   }
