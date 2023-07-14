@@ -1,5 +1,6 @@
 <template>
   <div class="menu_wrapper">
+    <div class="background"> </div>
     <div class="menu_content">
       <span v-for="(categorie, index) in categories" :key="index" class="menu_content_item">
         <NuxtLink :to="categorie">{{ categorie.replace("_", "") }}</NuxtLink>
@@ -14,57 +15,92 @@ import img from "@/imgs.json"
 export default {
   data() {
     return {
-      categories: img._categories
+      categories: img._categories,
     };
   },
+  methods: {
+    setBackgroundPos() {
+      const activeElm = document.getElementsByClassName("router-link-exact-active");
+      const active = activeElm[0]?.getBoundingClientRect();
+
+      const scrollElm = document.getElementsByClassName("menu_wrapper");
+      const scroll = scrollElm[0];
+
+      var styleSheet = document.styleSheets[0];
+      styleSheet.insertRule(`.background { left: ${active.left + window.scrollX + scroll.scrollLeft}px; width: ${active.width}px }`, styleSheet.cssRules.length);
+    }
+  },
+  watch: {
+    '$route'() {
+      this.$nextTick(() => {
+        this.setBackgroundPos()
+      })
+    }
+  },
+  destroyed() {
+    window?.removeEventListener("resize", this.setBackgroundPos);
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window?.addEventListener("resize", this.setBackgroundPos);
+      this.setBackgroundPos()
+    })
+  }
 };
 </script>
 
 <style lang="scss">
 .menu {
   &_wrapper {
+    position: sticky;
+    top: 0;
     background-color: $main-background-color;
     box-shadow: $image-shadow;
     border-radius: 0 0 15px 15px;
-    padding: 10px 0;
+    padding: 1.5rem;
     max-width: $max-content-width;
-    width: 100%;
+    width: calc(100% - 3rem);
     margin: 5px auto;
     overflow-x: auto;
     overflow-y: hidden;
+    z-index: 10;
   }
 
   &_content {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    width: fit-content;
-
+    position: relative;
+    width: max-content;
+    margin: auto;
+    z-index: 10;
 
     &_item {
-      padding: 0.75rem;
-      margin: 0.25rem;
 
       a {
         color: $main-font-color;
         min-width: max-content;
-        margin: 0.25rem;
         font-weight: 600;
-        transition: ease-out 0.2s all;
         font-size: 1rem;
-        padding: 0.75rem;
-        margin: 0.25rem;
+        padding: 0.75rem 1rem;
         border-radius: 10px;
+        transition: ease-out 0.2s all;
+        z-index: 20;
       }
     }
   }
 }
 
-.router-link-exact-active {
+.background {
+  position: absolute;
+  top: 0;
+  height: 100%;
   background-color: $dark-background-color;
-  color: $light-font-color !important;
+  z-index: 5;
+  transition: all 0.75s ease-out;
 }
 
+
+.router-link-exact-active {
+  color: $light-font-color !important;
+}
 
 .rotateY-enter-active,
 .rotateY-leave-active {
@@ -86,6 +122,17 @@ export default {
     &_content {
       flex-wrap: wrap;
     }
+  }
+}
+
+@keyframes routeChange {
+  from {
+    width: 750px;
+    left: -375px;
+  }
+
+  to {
+    width: 100%;
   }
 }
 </style>

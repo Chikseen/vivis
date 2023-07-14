@@ -8,7 +8,7 @@
 .galleryTitle {
   &_wrapper {
     position: sticky;
-    top: 0;
+    top: 3rem;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,9 @@
     width: calc(100% - 4rem);
     max-width: $max-content-width;
     color: $light-font-color;
-    animation: 1s ease-out slideInFromLeft;
+    background: linear-gradient(90deg, #424242 0%, #414141c0 20%, #41414100 40%);
+    animation: 0.75s ease-out slideInFromLeft;
+    z-index: 5;
 
     a h2 {
       color: $light-font-color;
@@ -27,7 +29,7 @@
     &::after {
       content: "See more ->";
       position: absolute;
-      top: 50%;
+      bottom: 0;
       right: 10%;
     }
   }

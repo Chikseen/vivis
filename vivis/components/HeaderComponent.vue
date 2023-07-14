@@ -70,7 +70,7 @@
         position: absolute;
         display: flex;
         bottom: 1rem;
-        right: 10%;
+        right: 1rem;
         height: 3rem;
         animation: 1s ease-out 0s 1 slideInFromRight;
 
@@ -84,7 +84,7 @@
     &_scrollhint {
       position: absolute;
       bottom: 1rem;
-      left: 10%;
+      left: 1rem;
       display: flex;
       height: 3rem;
       gap: 1rem;

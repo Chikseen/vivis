@@ -22,7 +22,6 @@ body,
 html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   font-family: cf;
   font-display: swap;
   background-color: $dark-background-color;
