@@ -9,7 +9,7 @@
         </a>
         <h2>:</h2>
         <a href="https://derkraft-fotografie.de/" aria-label="Link to the webpage of the Photographer">
-          <h2>https://derkraft-fotografie.de/</h2>
+          <h2 style="margin: auto;">derkraft-fotografie.de</h2>
         </a>
       </div>
       <p>5 Februar 2023</p>
