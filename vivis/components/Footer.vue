@@ -1,10 +1,10 @@
 <template>
   <div class="footer">
     <a href="https://github.com/Chikseen/vivis" aria-label="Link to the page source code">
-      <GithubLogo class="footer_logo"/>
+      <GithubLogo class="footer_logo" />
     </a>
     <a href="https://www.instagram.com/vivis_secrets/" aria-label="Link to Instagramprofile of the model">
-      <InstagramIcon class="footer_logo"/>
+      <InstagramIcon class="footer_logo" />
     </a>
     <nuxt-link to="DataPrivacy"> Datenschutz </nuxt-link>
     <nuxt-link to="Impressum"> Impressum </nuxt-link>
@@ -14,7 +14,7 @@
 <style lang="scss">
 .footer {
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,12 +24,18 @@
   z-index: 10;
 
   &_logo {
-    height: 3rem;
+    height: 2rem;
     width: auto;
   }
 
   a {
     color: $main-font-color;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .footer {
+    height: 3rem;
   }
 }
 </style>

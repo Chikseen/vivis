@@ -12,7 +12,7 @@
           <InstagramIcon />
         </a>
       </div>
-      <div class="header_content_scrollhint">
+      <div class="header_content_scrollhint" @click="scrollToMenu">
         <p class="header_content_scrollhint_arrow">-></p>
         <p>See more</p>
       </div>
@@ -20,12 +20,23 @@
   </div>
 </template>
 
+<script>
+export default {
+  methods: {
+    scrollToMenu() {
+      document.getElementById('menu').scrollIntoView();
+    }
+  },
+}
+</script>
+
 <style lang="scss">
 .header {
   &_wrapper {
     position: relative;
     width: 100vw;
     height: 100vh;
+    user-select: none;
   }
 
   &_img {

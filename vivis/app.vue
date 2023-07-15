@@ -25,6 +25,7 @@ html {
   font-family: cf;
   font-display: swap;
   background-color: $dark-background-color;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -63,22 +64,7 @@ img {
 }
 
 ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  position: absolute;
-}
-
-::-webkit-scrollbar-track {
-  background: #ffffff00;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #3f3f3f;
-  border-radius: 2px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #303030;
+  display: none;
 }
 
 //Animations

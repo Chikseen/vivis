@@ -1,5 +1,5 @@
 <template>
-  <div class="menu_wrapper">
+  <div class="menu_wrapper" id="menu">
     <div class="background"> </div>
     <div class="menu_content">
       <span v-for="(categorie, index) in categories" :key="index" class="menu_content_item">
@@ -27,7 +27,7 @@ export default {
       const scroll = scrollElm[0];
 
       var styleSheet = document.styleSheets[0];
-      styleSheet.insertRule(`.background { left: ${active.left + window.scrollX + scroll.scrollLeft}px; width: ${active.width}px }`, styleSheet.cssRules.length);
+      styleSheet.insertRule(`.background { left: ${active.left + window.scrollX + (scroll.scrollLeft - scroll?.getBoundingClientRect().left)}px; width: ${active.width}px }`, styleSheet.cssRules.length);
     }
   },
   watch: {
@@ -56,13 +56,14 @@ export default {
     top: 0;
     background-color: $main-background-color;
     box-shadow: $image-shadow;
-    border-radius: 0 0 15px 15px;
     padding: 1.5rem;
+    height: 1rem;
     max-width: $max-content-width;
     width: calc(100% - 3rem);
-    margin: 5px auto;
+    margin: 0 auto;
     overflow-x: auto;
     overflow-y: hidden;
+    clip-path: inset(0 0 1px 0); // Dirty fix for IOS 1px problem
     z-index: 10;
   }
 
@@ -76,13 +77,12 @@ export default {
 
       a {
         color: $main-font-color;
-        min-width: max-content;
         font-weight: 600;
-        font-size: 1rem;
-        padding: 0.75rem 1rem;
+        font-size: 16px;
+        padding: 0.75rem;
         border-radius: 10px;
-        transition: ease-out 0.2s all;
         z-index: 20;
+        transition: color 0.75s;
       }
     }
   }
@@ -91,8 +91,9 @@ export default {
 .background {
   position: absolute;
   top: 0;
+  margin-top: 0%;
   height: 100%;
-  background-color: $dark-background-color;
+  background: linear-gradient(0deg, #2b2b2b 0%, $dark-background-color 100%);
   z-index: 5;
   transition: all 0.75s ease-out;
 }
@@ -121,6 +122,29 @@ export default {
   .menu {
     &_content {
       flex-wrap: wrap;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .menu {
+    &_wrapper {
+      padding: 1.25rem;
+      max-width: $max-content-width;
+      width: calc(100% - 2.5rem);
+    }
+
+    &_content {
+      &_item {
+        a {
+          color: $main-font-color;
+          min-width: max-content;
+          font-weight: 600;
+          font-size: 12px;
+          padding: 0.75rem;
+          border-radius: 10px;
+        }
+      }
     }
   }
 }

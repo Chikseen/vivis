@@ -13,8 +13,8 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 2rem;
-    width: calc(100% - 4rem);
+    padding: 1rem 1.5rem;
+    width: calc(100% - 3rem);
     max-width: $max-content-width;
     color: $light-font-color;
     background: linear-gradient(90deg, #424242 0%, #414141c0 20%, #41414100 40%);
@@ -31,6 +31,7 @@
       position: absolute;
       bottom: 0;
       right: 10%;
+
     }
   }
 
@@ -48,8 +49,8 @@
       display: flex;
       gap: 1rem;
 
-
-      img {
+      img,
+      svg {
         height: 2rem;
         width: 2rem;
       }
