@@ -40,8 +40,14 @@ export default {
       }
     },
     getImgUrl(img) {
-      return `${this.imgJson.path}/${img.name}`
+      if (process.env.NODE_ENV === 'production')
+        return `images/${this.imgJson.path}/${img.name}`
+      else
+        return `${this.imgJson.path}/${img.name}`
     }
+  },
+  created() {
+    console.log(this.imgJson)
   },
   mounted() {
     window.addEventListener("scroll", () => this.reveal());
