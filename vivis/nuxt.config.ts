@@ -51,16 +51,30 @@ export default defineNuxtConfig({
 				{
 					hid: "description_main",
 					name: "description",
-					content: "Official Wegpage for the Model Vivi",
+					content: "Official Webpage for the Model Vivi",
 				},
 				{
 					hid: "keywords_main",
 					name: "keywords",
-					content: "Vivis, Vivis.Secret, Vivis.Gallery, Model, Shooting, Gallery, Images, Image Collection, Photos, Vivi",
+					content: "Vivis, Secret, Gallery, Model, Shooting, Images, Photos, Leipzig, Mode, Germany, Deutschland, Saxony, Sachsen, find",
 				},
 				{ hid: "author_main", name: "author", content: "Tim Menzel" },
 			],
-			link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+			link: [
+				{
+					rel: "icon",
+					type: "image/x-icon",
+					href: "/favicon.ico",
+				},
+				{
+					rel: "preconnect",
+					href: "https://fonts.googleapis.com",
+				},
+				{
+					rel: "stylesheet",
+					href: "https://fonts.googleapis.com/css2?family=Raleway&display=swap",
+				},
+			],
 		},
 	},
 });

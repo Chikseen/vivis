@@ -22,7 +22,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: cf;
+  font-family: "Raleway";
   font-display: swap;
   background-color: $dark-background-color;
   scroll-behavior: smooth;

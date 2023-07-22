@@ -27,7 +27,7 @@ export default {
       const scroll = scrollElm[0];
 
       var styleSheet = document.styleSheets[0];
-      styleSheet.insertRule(`.background { left: ${active.left + window.scrollX + (scroll.scrollLeft - scroll?.getBoundingClientRect().left)}px; width: ${active.width}px }`, styleSheet.cssRules.length);
+      styleSheet.insertRule(`.background { left: ${active?.left + window.scrollX + (scroll.scrollLeft - scroll?.getBoundingClientRect()?.left)}px; width: ${active?.width}px }`, styleSheet.cssRules.length);
     }
   },
   watch: {

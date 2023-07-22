@@ -9,11 +9,6 @@ $main-background-color: #ebebeb;
 $dark-background-color: #1d1d1d;
 $max-content-width: 1500px;
 
-@font-face {
-    font-family: 'cf';
-    src: url('../fonts/Raleway-Medium.ttf') format('truetype');
-}
-
 .boxShadow {
     &_bottom {
         box-shadow: 0 8px 5px -5px #a3a3a367;
