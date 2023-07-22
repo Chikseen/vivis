@@ -3,11 +3,11 @@
     <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery"
       :style="img.info?.isPortrait ? 'grid-row: span 2' : ''">
       <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
-        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" sizes="sm:100vw md:50vw lg:400px"
+        <img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" sizes="sm:100vw md:50vw lg:400px"
           densities="1x 2x" />
       </a>
       <a v-else :href="`images/${imgJson.path}/${img.name}`" aria-label="Link to the image">
-        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" sizes="sm:100vw md:50vw lg:400px"
+        <img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" sizes="sm:100vw md:50vw lg:400px"
           densities="1x 2x" />
       </a>
       <ul v-if="img.info?.tagList" class="gallery_image_overlay_tags">
