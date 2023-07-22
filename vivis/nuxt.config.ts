@@ -78,8 +78,6 @@ export default defineNuxtConfig({
 		},
 	},
 	routeRules: {
-		"/public/**": { swr: 31536000 },
-		"/images/**": { swr: 31536000 },
 		"/_ipx/**": { swr: 31536000 },
 	},
 });

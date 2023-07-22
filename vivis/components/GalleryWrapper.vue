@@ -40,10 +40,7 @@ export default {
       }
     },
     getImgUrl(img) {
-      if (process.env.NODE_ENV === 'production')
-        return `images/${this.imgJson.path}/${img.name}`
-      else
-        return `${this.imgJson.path}/${img.name}`
+      return `${this.imgJson.path}/${img.name}`
     }
   },
   mounted() {
