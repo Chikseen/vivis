@@ -1,6 +1,6 @@
 <template>
   <div class="menu_wrapper" id="menu">
-    <div class="background"> </div>
+    <div class="background" :style="backgroundPos"> </div>
     <div class="menu_content">
       <span v-for="(categorie, index) in categories" :key="index" class="menu_content_item">
         <NuxtLink :to="categorie">{{ categorie.replace("_", "") }}</NuxtLink>
@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       categories: img._categories,
+      backgroundPos: ""
     };
   },
   methods: {
@@ -26,8 +27,7 @@ export default {
       const scrollElm = document.getElementsByClassName("menu_wrapper");
       const scroll = scrollElm[0];
 
-      var styleSheet = document.styleSheets[0];
-      styleSheet.insertRule(`.background { left: ${active?.left + window.scrollX + (scroll.scrollLeft - scroll?.getBoundingClientRect()?.left)}px; width: ${active?.width}px }`, styleSheet.cssRules.length);
+      this.backgroundPos = `left: ${active?.left + window.scrollX + (scroll.scrollLeft - scroll?.getBoundingClientRect()?.left)}px; width: ${active?.width}px`;
     }
   },
   watch: {
