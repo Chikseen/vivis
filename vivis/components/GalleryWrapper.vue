@@ -3,12 +3,12 @@
     <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery"
       :style="img.info?.isPortrait ? 'grid-row: span 2' : ''">
       <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
-        <img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" sizes="sm:100vw md:50vw lg:400px"
-          densities="1x 2x" />
+        <nuxt-picture :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy"
+          sizes="sm:100px md:400px lg:1000px" />
       </a>
       <a v-else :href="`images/${imgJson.path}/${img.name}`" aria-label="Link to the image">
-        <img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" sizes="sm:100vw md:50vw lg:400px"
-          densities="1x 2x" />
+        <nuxt-picture :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy"
+          sizes="sm:100px md:400px lg:1000px" />
       </a>
       <ul v-if="img.info?.tagList" class="gallery_image_overlay_tags">
         <li v-for="(tag, index) in img.info.tagList" :key="index">
@@ -40,8 +40,10 @@ export default {
       }
     },
     getImgUrl(img) {
-      if (process.env.NODE_ENV === 'production')
+      if (process.env.NODE_ENV === 'production') {
+        console.log(`images/${this.imgJson.path}/${img.name}`)
         return `images/${this.imgJson.path}/${img.name}`
+      }
       else
         return `${this.imgJson.path}/${img.name}`
     }
