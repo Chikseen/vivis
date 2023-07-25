@@ -4,11 +4,11 @@
       :style="img.info?.isPortrait ? 'grid-row: span 2' : ''">
       <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
         <nuxt-picture :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy"
-          sizes="xs:320px sm:640px md:768px lg:1024px xl:1280px xxl:1536px 2xl:1920px" />
+          sizes="sm:25vw md:50vw lg:100vw" />
       </a>
       <a v-else :href="`images/${imgJson.path}/${img.name}`" aria-label="Link to the image">
         <nuxt-picture :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy"
-          sizes="xs:320px sm:640px md:768px lg:1024px xl:1280px xxl:1536px 2xl:1920px" />
+          sizes="xs:25vw md:50vw xl:100vw" />
       </a>
       <ul v-if="img.info?.tagList" class="gallery_image_overlay_tags">
         <li v-for="(tag, index) in img.info.tagList" :key="index">
