@@ -4,11 +4,11 @@
       :style="img.info?.isPortrait ? 'grid-row: span 2' : ''">
       <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
         <nuxt-picture :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy"
-          sizes="sm:100px md:400px lg:1000px" />
+          sizes="xs:320px sm:640px md:768px lg:1024px xl:1280px xxl:1536px 2xl:1920px" />
       </a>
       <a v-else :href="`images/${imgJson.path}/${img.name}`" aria-label="Link to the image">
         <nuxt-picture :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy"
-          sizes="sm:100px md:400px lg:1000px" />
+          sizes="xs:320px sm:640px md:768px lg:1024px xl:1280px xxl:1536px 2xl:1920px" />
       </a>
       <ul v-if="img.info?.tagList" class="gallery_image_overlay_tags">
         <li v-for="(tag, index) in img.info.tagList" :key="index">
@@ -41,15 +41,11 @@ export default {
     },
     getImgUrl(img) {
       if (process.env.NODE_ENV === 'production') {
-        console.log(`images/${this.imgJson.path}/${img.name}`)
         return `images/${this.imgJson.path}/${img.name}`
       }
       else
         return `${this.imgJson.path}/${img.name}`
     }
-  },
-  created() {
-    console.log(this.imgJson)
   },
   mounted() {
     window.addEventListener("scroll", () => this.reveal());
