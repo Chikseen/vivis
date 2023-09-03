@@ -9,13 +9,13 @@
 	},
 	"devDependencies": {
 		"@nuxt/devtools": "^0.7.1",
-		"@nuxt/image": "^1.0.0-rc.1",
 		"@types/node": "^18.17.0",
 		"nuxt": "^3.6.5",
 		"sass": "^1.58.3",
 		"sass-loader": "^13.2.0"
 	},
 	"dependencies": {
+		"@nuxt/image": "^1.0.0-rc.1",
 		"colorthief": "^2.4.0",
 		"sharp": "^0.32.1"
 	}

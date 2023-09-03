@@ -3,12 +3,10 @@
     <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery"
       :style="img.info?.isPortrait ? 'grid-row: span 2' : ''">
       <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
-        <nuxt-picture :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy"
-          sizes="sm:25vw md:50vw lg:100vw" />
+        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" fit='outside' format='webp' />
       </a>
-      <a v-else :href="`images/${imgJson.path}/${img.name}`" aria-label="Link to the image">
-        <nuxt-picture :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy"
-          sizes="xs:25vw md:50vw xl:100vw" />
+      <a v-else :href="`${imgJson.path}/${img.name}`" aria-label="Link to the image">
+        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" fit='outside' format='webp' />
       </a>
       <ul v-if="img.info?.tagList" class="gallery_image_overlay_tags">
         <li v-for="(tag, index) in img.info.tagList" :key="index">
@@ -40,11 +38,7 @@ export default {
       }
     },
     getImgUrl(img) {
-      if (process.env.NODE_ENV === 'production') {
-        return `images/${this.imgJson.path}/${img.name}`
-      }
-      else
-        return `${this.imgJson.path}/${img.name}`
+      return `${this.imgJson.path}/${img.name}`
     }
   },
   mounted() {

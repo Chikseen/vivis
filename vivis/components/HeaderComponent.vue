@@ -1,6 +1,7 @@
 <template>
   <div class="header_wrapper">
-    <img class="header_img" src="@/assets/staticImages/main/IMG_2687.webp" alt="Main background of the webpage" />
+    <nuxt-img class="header_img" src="IMG_2687.webp" alt="Main background of the webpage" loading="lazy" fit='outside'
+      format='webp' />
     <div class="header_content">
       <div class="header_content_titel">
         <h1 class="header_content_titel_vivis">Vivis</h1>

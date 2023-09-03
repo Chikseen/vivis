@@ -10,6 +10,12 @@ RUN apk update && apk upgrade
 
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
+
+ENV IPX_MAX_AGE="31536000"
+
+RUN npm install --ignore-scripts=false --verbose sharp
+RUN npm rebuild --platform=linux --arch=x64 sharp
+RUN npm rebuild --platform=linux --arch=arm64 sharp
 RUN npm install
 RUN npm run build
 

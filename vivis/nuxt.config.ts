@@ -3,7 +3,6 @@ const fs = require("fs");
 import hooks from "./hooks/getImageColors.js";
 
 export default defineNuxtConfig({
-	devtools: { enabled: true },
 	hooks: hooks(this),
 	vite: {
 		css: {
@@ -30,7 +29,16 @@ export default defineNuxtConfig({
 	modules: ["@nuxt/image"],
 	image: {
 		format: ["webp"],
-		dir: "/public",
+		provider: "ipx",
+		ipx: {
+			maxAge: 31536000,
+		},
+		screens: {
+			'xs': 80,
+			'sm': 160,
+			'md': 320,
+			'lg': 640,
+		  },
 	},
 	app: {
 		head: {

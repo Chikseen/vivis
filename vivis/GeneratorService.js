@@ -4,7 +4,7 @@ const fs = require("fs");
 const sharp = require("sharp");
 
 // global
-const workDir = path.join(__dirname, "public/images");
+const workDir = path.join(__dirname, "public");
 const workDirCategories = path.join(__dirname, "pages");
 
 const allImages = getAllImagePaths();
@@ -48,14 +48,16 @@ function getAllImagePaths() {
 	const files = fs.readdirSync(workDir);
 	files.forEach(async (file) => {
 		const imageFolderPath = path.join(workDir, file);
-		const images = fs.readdirSync(imageFolderPath);
-		imgsJSON[file] = [];
-		images.forEach((img) => {
-			imgsJSON[file].push(img);
-			const imgPath = path.join(imageFolderPath, img);
-			console.log(imgPath);
-			imagePathList.push(imgPath);
-		});
+		if (fs.lstatSync(imageFolderPath).isDirectory()) {
+			const images = fs.readdirSync(imageFolderPath);
+			imgsJSON[file] = [];
+			images.forEach((img) => {
+				imgsJSON[file].push(img);
+				const imgPath = path.join(imageFolderPath, img);
+				console.log(imgPath);
+				imagePathList.push(imgPath);
+			});
+		}
 	});
 
 	let categories = fs.readdirSync(workDirCategories);
