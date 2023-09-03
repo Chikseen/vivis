@@ -38,6 +38,8 @@ export default defineNuxtConfig({
 			'sm': 160,
 			'md': 320,
 			'lg': 640,
+			'xl': 1240,
+			'2xl': 1980,
 		  },
 	},
 	app: {
