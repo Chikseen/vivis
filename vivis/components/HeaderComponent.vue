@@ -1,7 +1,8 @@
 <template>
   <div class="header_wrapper">
-    <nuxt-img class="header_img" src="IMG_2687.webp" alt="Main background of the webpage" loading="lazy" fit='outside'
-      format='webp' :placeholder="true" sizes="xs:80px sm:160px md:320px lg:640px xl:1240px '2xl'1980px" />
+    <NuxtImg class="header_img" src="IMG_2687.webp" alt="Main background of the webpage" loading="lazy" fit='outside'
+      format='webp' sizes="1:200px 2:300px 3:350px 4:400px 5:450px 6:550px 7:650px 8:800px 9:950px 10:1100px 11:1300px"
+      densities="x1 x2 x3" />
     <div class="header_content">
       <div class="header_content_titel">
         <h1 class="header_content_titel_vivis">Vivis</h1>
@@ -42,8 +43,8 @@ export default {
 
   &_img {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
   }
 

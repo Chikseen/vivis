@@ -3,12 +3,12 @@
     <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery"
       :style="img.info?.isPortrait ? 'grid-row: span 2' : ''">
       <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
-        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" fit='outside' format='webp'
-          :placeholder="true" sizes="xs:80px sm:160px md:320px lg:640px" />
+        <NuxtImg :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" fit='outside'
+          sizes="3:40vw 4:50vw 5:450px" densities="x1 x2 x3" />
       </a>
       <a v-else :href="`${imgJson.path}/${img.name}`" aria-label="Link to the image">
-        <nuxt-img :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" fit='outside' format='webp'
-          :placeholder="true" sizes="xs:80px sm:160px md:320px lg:640px" />
+        <NuxtImg :src="getImgUrl(img)" alt="A Picture of the model" loading="lazy" fit='outside'
+          sizes="3:40vw 4:50vw 5:450px" densities="x1 x2 x3" />
       </a>
       <ul v-if="img.info?.tagList" class="gallery_image_overlay_tags">
         <li v-for="(tag, index) in img.info.tagList" :key="index">
@@ -114,6 +114,7 @@ export default {
     overflow-y: hidden;
 
     div {
+      position: relative;
       display: flex;
       flex-direction: column;
       min-width: 20rem;
@@ -125,10 +126,9 @@ export default {
         height: 100%;
 
         img {
-          min-width: 7rem;
-          width: 100%;
+          min-width: 300px;
           height: 100%;
-          max-width: 30rem;
+          max-width: 100%;
           object-fit: cover;
           border-radius: 10px;
           margin: 0 auto;
