@@ -1,7 +1,11 @@
 <template>
 	<div>
-		<chris_del_trip />
+		<sonnenlichtphotographie />
 		<manuel_r_portraits />
+		<gunar_dame_photography />
+		<andreaspokrandtfotografie />
+		<chris_del_trip />
+		<fotoundtraum />
 	</div>
 </template>
 

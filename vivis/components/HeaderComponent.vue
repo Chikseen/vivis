@@ -2,7 +2,7 @@
   <div class="header_wrapper">
     <NuxtImg class="header_img" src="IMG_2687.webp" alt="Main background of the webpage" loading="lazy" fit='outside'
       format='webp' sizes="1:200px 2:300px 3:350px 4:400px 5:450px 6:550px 7:650px 8:800px 9:950px 10:1100px 11:1300px"
-      densities="x1 x2 x3" />
+      densities="x1 x2 x3" quality="80" />
     <div class="header_content">
       <div class="header_content_titel">
         <h1 class="header_content_titel_vivis">Vivis</h1>
@@ -10,7 +10,7 @@
       </div>
       <div class="header_content_logos_wrapper">
         <p>Follow Me -></p>
-        <a href="https://www.instagram.com/vivis_secrets/" aria-label="Link to the Photographer">
+        <a href="https://www.instagram.com/vivian.ktl/" aria-label="Link to the Photographer">
           <InstagramIcon />
         </a>
       </div>

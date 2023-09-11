@@ -3,7 +3,7 @@
     <a href="https://github.com/Chikseen/vivis" aria-label="Link to the page source code">
       <GithubLogo class="footer_logo" />
     </a>
-    <a href="https://www.instagram.com/vivis_secrets/" aria-label="Link to Instagramprofile of the model">
+    <a href="https://www.instagram.com/vivian.ktl/" aria-label="Link to Instagramprofile of the model">
       <InstagramIcon class="footer_logo" />
     </a>
     <nuxt-link to="DataPrivacy"> Datenschutz </nuxt-link>

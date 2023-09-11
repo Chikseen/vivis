@@ -1,8 +1,8 @@
 <template>
 	<div>
+		<kontrastreich20 />
 		<betoblitz />
 		<blickwinkel />
-		<kontrastreich20 />
 	</div>
 </template>
 
