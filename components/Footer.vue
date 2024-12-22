@@ -6,8 +6,7 @@
     <a href="https://www.instagram.com/vivian.ktl/" aria-label="Link to Instagramprofile of the model">
       <InstagramIcon class="footer_logo" />
     </a>
-    <nuxt-link to="DataPrivacy"> Datenschutz </nuxt-link>
-    <nuxt-link to="Impressum"> Impressum </nuxt-link>
+    <nuxt-link to="/Impressum"> Impressum </nuxt-link>
   </div>
 </template>
 
