@@ -1,5 +1,5 @@
 <template>
 	<div>
-		<czfotografie />
+		<LazyCzfotografie />
 	</div>
 </template>

@@ -1,5 +1,5 @@
 <template>
 	<div>
-		<der_kraft />
+		<LazyDer_kraft />
 	</div>
 </template>

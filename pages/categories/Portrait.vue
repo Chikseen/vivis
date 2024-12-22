@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<ulfleuteritz />
-		<authenticpicture />
+		<LazyUlfleuteritz />
+		<LazyAuthenticpicture />
 	</div>
 </template>

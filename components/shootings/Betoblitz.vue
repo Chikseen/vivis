@@ -22,6 +22,8 @@
 </template>
 
 <script lang="ts">
+import { useMainStore } from "@/stores/mainStore";
+
 export default {
   computed: {
     images(): any[] {

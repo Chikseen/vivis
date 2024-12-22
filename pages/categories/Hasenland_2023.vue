@@ -1,10 +1,10 @@
 <template>
 	<div>
-		<sonnenlichtphotographie />
-		<manuel_r_portraits />
-		<gunar_dame_photography />
-		<andreaspokrandtfotografie />
-		<chris_del_trip />
-		<fotoundtraum />
+		<LazySonnenlichtphotographie />
+		<LazyManuel_r_portraits />
+		<LazyGunar_dame_photography />
+		<LazyAndreaspokrandtfotografie />
+		<LazyChris_del_trip />
+		<LazyFotoundtraum />
 	</div>
 </template>

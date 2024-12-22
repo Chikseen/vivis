@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<kontrastreich20 />
-		<betoblitz />
-		<blickwinkel />
+		<LazyKontrastreich20 />
+		<LazyBetoblitz />
+		<LazyBlickwinkel />
 	</div>
 </template>
