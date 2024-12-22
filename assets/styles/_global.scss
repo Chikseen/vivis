@@ -1,0 +1,16 @@
+$footer-gradiant-black: linear-gradient(50deg, #36393a 0%, #494a4b 63%, #5c5c5c 100%);
+$image-shadow: 0.2rem 0.2rem 0.8rem 0px #5e5e5e4b;
+$menu-text-shadow: 0.2rem 0.2rem 0.8rem 0px #5e5e5e4b;
+$borderRadius: 0.8rem;
+$main-font-color: #1d1d1d;
+$light-font-color: #ebebeb;
+$light-background-font-color: #aaaaaa;
+$main-background-color: #ebebeb;
+$dark-background-color: #1d1d1d;
+$max-content-width: 1500px;
+
+.boxShadow {
+    &_bottom {
+        box-shadow: 0 8px 5px -5px #a3a3a367;
+    }
+}
