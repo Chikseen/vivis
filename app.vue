@@ -16,8 +16,8 @@ export default {
       store: useMainStore(),
     }
   },
-  mounted() {
-    this.store.fetchImages();
+  async created() {
+    await this.store.fetchImages();
   },
 };
 </script>

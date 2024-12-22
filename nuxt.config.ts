@@ -24,7 +24,12 @@ export default defineNuxtConfig({
 		},
 	},
 
-	components: [{ path: "~/components", pathPrefix: false }],
+	components: [
+		{
+			path: "~/components", pathPrefix: false
+		}, {
+			path: "~/pages", pathPrefix: false
+		}],
 	modules: ["@nuxt/image", "@pinia/nuxt"],
 
 	image: {

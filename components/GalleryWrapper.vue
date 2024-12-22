@@ -1,12 +1,12 @@
 <template>
   <div class="gallery_wrapper">
-    <div v-for="(img, index) in imgJson?.imgs" :key="index" class="gallery"
+    <div v-for="(img, index) in images" :key="index" class="gallery"
       :style="img.info?.isPortrait ? 'grid-row: span 2' : ''">
       <a v-if="img.info?.href" :href="img.info?.href" aria-label="Link to the image">
         <NuxtImg :src="`images/${getImgUrl(img)}`" alt="A Picture of the model" loading="lazy" fit='outside'
           sizes="3:40vw 4:50vw 5:450px" densities="x1 x2 x3" />
       </a>
-      <a v-else :href="`${imgJson.path}/${img.name}`" aria-label="Link to the image">
+      <a v-else :href="`${path}/${img.name}`" aria-label="Link to the image">
         <NuxtImg :src="`images/${getImgUrl(img)}`" alt="A Picture of the model" loading="lazy" fit='outside'
           sizes="3:40vw 4:50vw 5:450px" densities="x1 x2 x3" />
       </a>
@@ -23,7 +23,8 @@
 <script lang="ts">
 export default {
   props: {
-    imgJson: { type: Object, default: () => { } }
+    images: { type: Object, default: () => { } },
+    path: { type: String, default: "" }
   },
   methods: {
     reveal() {
@@ -40,7 +41,7 @@ export default {
       }
     },
     getImgUrl(img: any) {
-      return `${this.imgJson.path}/${img.name}`
+      return `${this.path}/${img.name}`
     }
   },
   mounted() {

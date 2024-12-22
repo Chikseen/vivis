@@ -10,19 +10,26 @@
       </div>
       <p>13 August, 2022</p>
     </GalleryTitleWrapper>
-    <GalleryWrapper :imgJson="imgJson" />
+    <GalleryWrapper :images="images" :path="path" />
   </div>
 </template>
 
 <script lang="ts">
 export default {
+  computed: {
+    images(): any[] {
+      let images: any[] = [];
+      const names: string[] = this.store.$state.images[this.path]
+      names?.forEach(name => {
+        images.push({ name: name, info: this.igInfo[name] });
+      });
+      return images;
+    }
+  },
   data() {
     return {
       store: useMainStore(),
-      imgJson: {
-        path: "blickwinkel",
-        imgs: [] as any,
-      },
+      path: "blickwinkel",
       igInfo: {
         ["67CB5DEA-C4E2-43B6-993C-92D51267C303.webp"]: {
           href: "https://www.instagram.com/p/CkOIXm3oCwr/",
@@ -54,12 +61,6 @@ export default {
         },
       } as any
     }
-  },
-  created() {
-    const names: string[] = this.store.$state.images[this.imgJson.path]
-    names?.forEach(name => {
-      this.imgJson.imgs.push({ name: name, info: this.igInfo[name] });
-    });
-  },
+  }
 }
 </script>

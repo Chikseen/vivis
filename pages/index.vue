@@ -1,16 +1,10 @@
 <template>
-  <Fairytale />
+  <div>
+    <kontrastreich20 />
+    <betoblitz />
+    <blickwinkel />
+  </div>
 </template>
-
-<script lang="ts">
-import Fairytale from "~/pages/categories/Fairytale.vue"
-
-export default {
-  components: {
-    Fairytale
-  }
-};
-</script>
 
 <style lang="scss">
 .fade-enter-active,

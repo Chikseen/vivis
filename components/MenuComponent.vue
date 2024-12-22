@@ -3,7 +3,7 @@
     <div class="background" :style="backgroundPos"> </div>
     <div class="menu_content">
       <span v-for="(categorie, index) in categories" :key="index" class="menu_content_item">
-        <NuxtLink :to="`/categories/${categorie}`">{{ categorie.replace("_", "") }}</NuxtLink>
+        <NuxtLink :to="`/categories/${categorie}`">{{ categorie.replace("_", " ") }}</NuxtLink>
       </span>
     </div>
   </div>

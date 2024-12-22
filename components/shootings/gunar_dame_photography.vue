@@ -10,7 +10,7 @@
 			</div>
 			<p>13 Mai, 2023</p>
 		</GalleryTitleWrapper>
-		<GalleryWrapper :imgJson="imgJson" />
+		<GalleryWrapper :images="images" :path="path" />
 	</div>
 </template>
 
@@ -18,13 +18,20 @@
 import { useMainStore } from "@/stores/mainStore";
 
 export default {
+	computed: {
+		images(): any[] {
+			let images: any[] = [];
+			const names: string[] = this.store.$state.images[this.path]
+			names?.forEach(name => {
+				images.push({ name: name, info: this.igInfo[name] });
+			});
+			return images;
+		}
+	},
 	data() {
 		return {
 			store: useMainStore(),
-			imgJson: {
-				path: "gunar_dame_photography",
-				imgs: [] as any,
-			},
+			path: "gunar_dame_photography",
 			igInfo: {
 				["EDDCEDC9-2ABD-4C00-9C70-71B6AA290EBB.webp"]: {
 					href: "https://www.instagram.com/p/Cs_KVh8I813/?img_index=1",
@@ -77,12 +84,6 @@ export default {
 				},
 			} as any
 		}
-	},
-	created() {
-		const names: string[] = this.store.$state.images[this.imgJson.path]
-		names?.forEach(name => {
-			this.imgJson.imgs.push({ name: name, info: this.igInfo[name] });
-		});
 	},
 }
 </script>

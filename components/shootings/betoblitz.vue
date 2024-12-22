@@ -17,19 +17,26 @@
       </div>
       <p>13 October, 2021</p>
     </GalleryTitleWrapper>
-    <GalleryWrapper :imgJson="imgJson" />
+    <GalleryWrapper :images="images" :path="path" />
   </div>
 </template>
 
 <script lang="ts">
 export default {
+  computed: {
+    images(): any[] {
+      let images: any[] = [];
+      const names: string[] = this.store.$state.images[this.path]
+      names?.forEach(name => {
+        images.push({ name: name, info: this.igInfo[name] });
+      });
+      return images;
+    }
+  },
   data() {
     return {
       store: useMainStore(),
-      imgJson: {
-        path: "betoblitz",
-        imgs: [] as any,
-      },
+      path: "betoblitz",
       igInfo: {
         ["IMG_0009.webp"]: {
           href: "https://www.instagram.com/p/CTPRQ4sMC9p/",
@@ -93,12 +100,6 @@ export default {
         },
       } as any
     }
-  },
-  created() {
-    const names: string[] = this.store.$state.images[this.imgJson.path]
-    names?.forEach(name => {
-      this.imgJson.imgs.push({ name: name, info: this.igInfo[name] });
-    });
   },
 }
 </script>

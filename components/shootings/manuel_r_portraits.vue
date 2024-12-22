@@ -11,7 +11,7 @@
 			<p>13 Mai, 2023</p>
 		</GalleryTitleWrapper>
 
-		<GalleryWrapper :imgJson="imgJson" />
+		<GalleryWrapper :images="images" :path="path" />
 	</div>
 </template>
 
@@ -19,13 +19,20 @@
 import { useMainStore } from "@/stores/mainStore";
 
 export default {
+	computed: {
+		images(): any[] {
+			let images: any[] = [];
+			const names: string[] = this.store.$state.images[this.path]
+			names?.forEach(name => {
+				images.push({ name: name, info: this.igInfo[name] });
+			});
+			return images;
+		}
+	},
 	data() {
 		return {
 			store: useMainStore(),
-			imgJson: {
-				path: "manuel_r_portraits",
-				imgs: [] as any,
-			},
+			path: "manuel_r_portraits",
 			igInfo: {
 				["_70a7076.webp"]: {
 					href: "https://www.instagram.com/p/CsnlxZsqcRk/",
@@ -170,12 +177,6 @@ export default {
 				}
 			} as any
 		}
-	},
-	created() {
-		const names: string[] = this.store.$state.images[this.imgJson.path]
-		names?.forEach(name => {
-			this.imgJson.imgs.push({ name: name, info: this.igInfo[name] });
-		});
 	},
 }
 </script>
