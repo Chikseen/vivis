@@ -51,7 +51,7 @@ export default defineNuxtConfig({
 				{ name: "robots", content: "noindex" },
 				///
 
-				{ name: "viewport", content: "width=device-width, initial-scale=1" },
+				{ name: "viewport", content: "initial-scale=1, width=device-width, user-scalable=no" },
 				{
 					hid: "description_main",
 					name: "description",
