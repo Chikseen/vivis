@@ -34,15 +34,12 @@ export default {
 			path: "authenticpicture",
 			igInfo: {
 				["IMG_4163.webp"]: {
-					href: "XXXXXX",
 					isPortrait: true,
 				},
 				["IMG_4164.webp"]: {
-					href: "XXXXXX",
 					isPortrait: true,
 				},
 				["IMG_4165.webp"]: {
-					href: "XXXXXX",
 					isPortrait: true,
 				},
 				["IMG_4167.webp"]: {

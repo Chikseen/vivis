@@ -1,4 +1,12 @@
+const fs = require('fs');
+import { getAllBlobsFromContainer } from './services/blobService'
+
 export default defineNuxtConfig({
+	hooks: {
+		ready: async () =>
+			fs.writeFileSync('./public/shootings.json', JSON.stringify(await getAllBlobsFromContainer()))
+	},
+
 	vite: {
 		css: {
 			preprocessorOptions: {

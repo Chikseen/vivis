@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { getAllBlobsFromContainer } from '../services/blobService'
+import images from "@/public/shootings.json"
 
 export const useMainStore = defineStore('main', {
 	state: () => ({
@@ -7,7 +7,7 @@ export const useMainStore = defineStore('main', {
 	}),
 	actions: {
 		async fetchImages() {
-			this.images = await getAllBlobsFromContainer()
+			this.images = images
 		},
 	},
 })
